@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.oauth2.client.*;
-import org.springframework.security.oauth2.client.registration.*;
+import org.springframework.security.oauth2.client.AuthorizedClientServiceReactiveOAuth2AuthorizedClientManager;
+import org.springframework.security.oauth2.client.InMemoryReactiveOAuth2AuthorizedClientService;
+import org.springframework.security.oauth2.client.registration.ClientRegistration;
+import org.springframework.security.oauth2.client.registration.InMemoryReactiveClientRegistrationRepository;
+import org.springframework.security.oauth2.client.registration.ReactiveClientRegistrationRepository;
 import org.springframework.security.oauth2.client.web.reactive.function.client.ServerOAuth2AuthorizedClientExchangeFilterFunction;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
@@ -33,9 +36,7 @@ public class OAuthClientConfiguration {
                 .clientAuthenticationMethod(new ClientAuthenticationMethod(client_authentication_method))
                 .clientSecret(client_secret)
                 //.scope(scope)
-                .authorizationGrantType(new AuthorizationGrantType(authorizationGrantType))
-                
-                //.clientName("okta")
+                .authorizationGrantType(new AuthorizationGrantType(authorizationGrantType))                
                 .build();
         return new InMemoryReactiveClientRegistrationRepository(registration);
     }
@@ -44,13 +45,13 @@ public class OAuthClientConfiguration {
     WebClient webClient(ReactiveClientRegistrationRepository clientRegistrations) {
         InMemoryReactiveOAuth2AuthorizedClientService clientService = new InMemoryReactiveOAuth2AuthorizedClientService(clientRegistrations);
         AuthorizedClientServiceReactiveOAuth2AuthorizedClientManager authorizedClientManager = new AuthorizedClientServiceReactiveOAuth2AuthorizedClientManager(clientRegistrations, clientService);
-        ServerOAuth2AuthorizedClientExchangeFilterFunction oauth = new ServerOAuth2AuthorizedClientExchangeFilterFunction(authorizedClientManager);
+        
+        ServerOAuth2AuthorizedClientExchangeFilterFunction oauth = new ServerOAuth2AuthorizedClientExchangeFilterFunction(authorizedClientManager);        
         oauth.setDefaultClientRegistrationId("okta");
-        logger.info("webClient.getToken");
+        logger.info("OKTA WebCliente Token OAuth2");
         
         return WebClient.builder()
                 .filter(oauth)
                 .build();
     }
-
 }
