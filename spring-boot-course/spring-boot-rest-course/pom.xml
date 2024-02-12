@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.apixcloud</groupId>
   <artifactId>spring-boot-rest-course</artifactId>
@@ -8,33 +9,36 @@
   <version>0.1.0-SNAPSHOT</version>
   <name>spring-boot-rest-course</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
 
+  <dependencies>
+    <dependency>    
+      <groupId>junit</groupId>    
+      <artifactId>junit</artifactId>    
+      <version>3.8.1</version>    
+      <scope>test</scope>  
+    </dependency>
   </dependencies>
+    
   <licenses>
-    <license>
+    <license>    
       <name>MIT License</name>
       <url>http://www.opensource.org/licenses/mit-license.php</url>
       <distribution>repo</distribution>
-  </license>
-
-</licenses>
+    </license>
+  </licenses>
+  
   <developers>
     <developer>
       <email>yanezv.ricardo@gmail..com</email>
-      <name>Ricardo Yañez</name>
+      <name>Ricardo Yañez</name>    
       <url>https://github.com/ryanezv</url>
       <id>ryanezv</id>
-  </developer>
-
-</developers>
+    </developer>
+  </developers>
+    
   <modules>
     <module>user-admin-parent-m1-p3-start</module>
-</modules>
+    <module>user-admin-parent-m1-p1-start</module>
+  </modules>
+  
 </project>

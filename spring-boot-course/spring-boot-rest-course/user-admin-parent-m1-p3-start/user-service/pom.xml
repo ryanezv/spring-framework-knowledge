@@ -6,7 +6,7 @@
   <description>User Service - Module1-Practice3-Start</description>
 
   <groupId>com.apixcloud.users</groupId>
-  <artifactId>user-service</artifactId>
+  <artifactId>user-service-m1-p3-start</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <modelVersion>4.0.0</modelVersion>
   <url>http://maven.apache.org</url>

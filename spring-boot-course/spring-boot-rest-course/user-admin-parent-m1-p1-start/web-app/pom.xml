@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <name>web-app</name>
+  <description>Web App - Module1-Practice1-Start</description>
+  <packaging>war</packaging>
+
+  <groupId>com.apixcloud.webapp</groupId>
+  <artifactId>web-app</artifactId>
+  <version>0.1.0-SNAPSHOT</version>  
+  <url>http://maven.apache.org</url>
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.apixcloud.app</groupId>
+    <artifactId>user-admin-parent-m1-p1-start</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+  
+  <dependencies>
+    <!-- spring web starter -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>3.1.1</version>
+    </dependency>    
+  </dependencies>
+
+  <build>
+    <plugins>
+        <!-- plugin to generate war component -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+            <configuration>
+               <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
+
+</project>
