@@ -8,13 +8,13 @@ Antes de comenzar, asegúrate de conocer la arquitectura y la versión de tu sis
 
 ### **JDK JAVA**
 
-Comenzamos con el más importante que es el Kit de Desarrollode Software (SDK por sus siglas en inglés) para java, el JDK es esencial para el desarrollo java. Asegúrate de seguir cada paso cuidadosamente.
+Comenzamos con el más importante que es el Kit de Desarrollo de Software (SDK por sus siglas en inglés) para java, el JDK es esencial para el desarrollo java. Asegúrate de seguir cada paso cuidadosamente.
 
 ##### **Paso 1: Descargar el JDK**
 
 1. Accede al sitio web oficial de Oracle: https://www.oracle.com/mx/java/technologies/downloads/.
 
-2. En la sección "JDK DevelopmentKit 17.0.9 downloads", te da 3 opciones:
+2. En la sección "JDK Development Kit 17.0.9 downloads", te da 3 opciones:
    
    **![](https://lh7-us.googleusercontent.com/8_qpVv-6mqAgUidRVF_gXccorC6rBgmEKXaF1GBzPfI8n4RAASm764SjjaaDNISZ9vtdouuedTdm8FPnSkLftL1fA0WTrUoG6_xXqJVuZW19ftcsHaFRoCaMKFZQ8_MTbPILX__Mhd7B8UoT-9Vq2sE)**
 
@@ -80,13 +80,13 @@ Comenzamos con el más importante que es el Kit de Desarrollode Software (SDK po
 
 Spring Tool Suite (STS), una herramienta integral diseñada para facilitar el desarrollo de aplicaciones basadas en el framework Spring y puedes configurarlo en tu IDE favorito (Eclipse, Visual Studio Code, o Theia). De igual manera existe el paquete "Eclipse (Bundle)" que es una distribución especializada de Eclipse que incluye por default el Spring Tools Suite, lo que evita la necesidad de configurar Eclipse manualmente con los complementos y herramientas necesarios para trabajar con proyectos Spring.
 
-Para el curso, procederemos con la instalaciónde Visual Studio Code, seguido por la incorporación del Spring Tool Suite (STS) como extensión en VS Code. Además, te guiaremos en la instalación de Eclipse (Bundle). Cualquiera de estas opciones que elijas será óptima para el desarrollo delcurso.
+Para el curso, procederemos con la instalaciónde Visual Studio Code, seguido por la incorporación del Spring Tool Suite (STS) como extensión en VS Code. 
 
-#### VisualStudioCode + SpringToolSuite(STS)
+#### Visual Studio Code + Spring Tool Suite(STS)
 
 ##### **Paso 1: Instalar Visual Studio Code**
 
-1. Accede al sitio oficial de VisualStudioCode: https://code.visualstudio.com/.
+1. Accede al sitio oficial de Visual Studio Code: https://code.visualstudio.com/.
 
 2. Haz clicen el botón "Download"para descargar el instalador de Windows.
    
@@ -128,41 +128,7 @@ Para el curso, procederemos con la instalaciónde Visual Studio Code, seguido po
 
 2. Con esto ya tenemos configurada la extensión para comenzar a editar proyectos Spring Boot en Visual Studio Code.
 
-#### Eclipse(Bundle)
-
-##### **Paso 1: Descargar STS**
-
-3. Accede al sitio web oficial de Spring Tools: https://spring.io/tools/
-
-4. En la sección `Spring Tools 4 for Eclipse` vamos a descargar `4.21.0 - WINDOWS x86_64`.
-   
-   **![](https://lh7-us.googleusercontent.com/oYcXl5TzjJZZ7IM9_pAsJ8GNwBQbFnwd0rkYE7tEBqMOpvalqJm0LHPeC4uOLAgCU4E5Oh4ldjFaP1ykaTmvn-kPExBx0X1CWmKo_Qi_IyIOKcpfA2tus0tTJh8z68yf41nc8D5iYqTm5hjKebFFu6Y)**
-
-##### **Paso 2: Instalar STS**
-
-1. Da doble clic en el archivo que se descargó y comenzará a descomprimir el contenido en una carpeta llamada `sts-4.21.0.RELEASE`.
-   
-   **![](https://lh7-us.googleusercontent.com/WVO7oAVdx5iTlA9ps4hmCz5hxzwOORftlkiZwJISO0Yn0GwbSTRQnvLkMK8OjEBGMQHSKfJv9ld4SbPW_9yY8VNxe6hqPEFIM2Q6803VHgiP4uReFp5GPpnAuEA_RHYK8JZyjLg1KqjIfYaUi-FuOHw)**
-   
-   **<img title="" src="https://lh7-us.googleusercontent.com/qltCWVyQSSgELAdmy_CqfXjBQwaUIo4PlDu_SuE-vOGRo2ltMXTfK0MWs5gSAhGDIfwSa-8A8xu9Yf3nD3jD3JXLqI7oXApC2GHEgljqUQcCR4ilu-WN-2g4jVejNuSoW4e_a6KrpiGUPXzWmeFfkHk" alt="" data-align="center" width="181">**
-
-2. Para mantener una instalación de programas organizada, se recomienda trasladar la carpeta a la ubicación designada de programas instalados.
-
-3. En la nueva ubicación abre la carpeta resultante y ejecutael archivo ejecutable `SpringToolSuite4.exe`.
-   
-   **![](https://lh7-us.googleusercontent.com/qKnVn4wraUkQ3rT8lcpcJzEBfK4USVY-64QllWYTrg4kbjlWJOOv9Fq3i2JCiVDdGlD4QwoX2KVnrMVEYf6DCQ2u4siGBAIM3E6kn1tT6Sq4ToF4b5NFlQR1WXpUgaxDuV31uiz1mFbOyWUnOr6u63k)**
-
-4. STS iniciará y te pedirá que elijas un espacio de trabajo. Puedes seleccionarla ubicaciónpredeterminadao elegiruna nueva.
-   
-   **![](https://lh7-us.googleusercontent.com/kWI_tIT4M_JzXrEiTlT_KpFolR_s15CN10DU3rWHi-rQKdZGhy-oFgCRZBN_cmauM1HBfIdSz7Pljv1Tl-qk24C6XxcVInQh-ZtvzSU5jEsL3fKPRvrIo-q4ozngKPJsxd5qhEdZ_0UO_7ev_aE1v-U)**
-   
-   **![](https://lh7-us.googleusercontent.com/HMmA_EVxNuaHTWTRvhcGMJmyXGqNMSAe1yLMYZyLMAKIuXhpucsTAyS3u8_u4ZvGuJLn9DzWip4qb8hj3Y60DFKVl-VzuYWvv0Ip4nb2EY7lIefJAFmhEuklVe33re0gYDCJ8KKcjPAat2a5TNJfL4c)**
-
-5. Haz clicen "Launch" para iniciarSTS.
-   
-   **![](https://lh7-us.googleusercontent.com/ih2ui-D-U5DaqhaIfO0MeWiVB11ku1gt7B4lPLgpSP9M4Vbo5Xk68sknC2ErzPBKsxsaYr521_370smJ2re1dVCufF8ngJjaNDwU7ijwwgZfPr9YNpLgT4PYCoorB4DlTKGsYX-h35s2fHymqduxHt4)**
-
-¡Felicidades! Has instalado exitosamente Spring Tool Suite y está listo cualquiera de losdos IDEs que hayas seleccionadopara nuestro curso.
+¡Felicidades! Has instalado exitosamente Spring Tool Suite y está listo cualquiera de losdos IDEs que hayas seleccionado para nuestro curso.
 
 ### **PostgreSQL**
 
@@ -194,17 +160,17 @@ PostgreSQL, un sistema de gestión de bases de datos relacional de código abier
 
 3. En la sección de los componentes que deseas instalar se encuentran las herramientas de línea de comandos y las bibliotecas de desarrollo, por lo seleccionaremos todas:
    
-   1. PostgreSQL Server: Es el motor de la basede datos PostgreSQL.Incluye el servidor que gestiona las conexiones de los clientes, ejecuta las consultas SQL y administra el almacenamiento de los datos. Este componente es esencial y siempre se instala, ya que también incluye bibliotecas y herramientas adicionales necesarias para el desarrollo de aplicacionesque utilizanPostgreSQL.
+   1. PostgreSQL Server: Es el motor de la base de datos PostgreSQL. Incluye el servidor que gestiona las conexiones de los clientes, ejecuta las consultas SQL y administra el almacenamiento de los datos. Este componente es esencial y siempre se instala, ya que también incluye bibliotecas y herramientas adicionales necesarias para el desarrollo de aplicaciones que utilizan PostgreSQL.
    
    2. Command Line Tools: Herramientas de línea de comandosque facilitan la administración y el uso de PostgreSQL. Incluye utilidadescomo psql para interactuar directamente con la base de datos desde la línea de comandos. Útil para administradores y desarrolladores que prefieren trabajardesdela terminal.
    
-   3. pgAdmin(o Herramientade AdministraciónGráfica):Una interfaz gráfica de usuario para administrar y visualizar bases de datos PostgreSQL. Permite realizar tareas administrativas, ejecutar consultas y gestionar objetos de la base de datos de manera visual. Recomendado para aquellos que prefieren una interfaz gráfica para administrar bases de datos.
+   3. pgAdmin(o Herramienta de Administración Gráfica):Una interfaz gráfica de usuario para administrar y visualizar bases de datos PostgreSQL. Permite realizar tareas administrativas, ejecutar consultas y gestionar objetos de la base de datos de manera visual. Recomendado para aquellos que prefieren una interfaz gráfica para administrar bases de datos.
    
    4. Stack Builder: Una herramienta que permite agregar extensiones y complementos a PostgreSQL. Puedes usar Stack Builder para instalar herramientas adicionales, controladores de conexión y otros complementos que puedan ser necesarios. Las herramientas para el curso lasveremos más adelanteen el punto 10.
       
       **![](https://lh7-us.googleusercontent.com/rrcqTcX7uVD92MgK9hyzdvypXmWvqxVnRlzWB6_u4xDhPnK83TH9eOZJ0LZkUXjczNcGsbqUXcOWCW4PB02FbHEKHrszGKMfRrKF2GOsdhjdCjfAL-OCRxq1FSUgs85v9NuJkOQ-TcOjg-8hv_rxls4)**
 
-4. Eligela ubicaciónde instalaciónde la data y haz clicen `Siguiente`.
+4. Elige la ubicación de instalación de la data y haz clic en `Siguiente`.
    
    **![](https://lh7-us.googleusercontent.com/F9dTp98wG5ofb0FQnTAAH-F1gf94KMa7xkMi-ZPy1bQvptmdSxgki7uVWNn9tC0uZ0kBUIzO2KB856LokV7JOnG4wZarPHrBcD-lyQg7bp8iTQQ3aohhyt1yOqbeZ3YmJOaU4_TuziZnCcwJ6GCC8EI)**
 
@@ -224,7 +190,7 @@ PostgreSQL, un sistema de gestión de bases de datos relacional de código abier
    
    **![](https://lh7-us.googleusercontent.com/5Ozqlwrq7isC37rDZo_gH_53VCI17N3OW_qWQdvWsHtT5ccDKF7dSNQRUiPrLeLx6Vcjen82QBbRIzm8vfnT4tK9dB6ABeQK9J8FoGrJpeN8Nx2rjFg3K0rTvM--J05Tje7aEXgGAHryr6BE2XhMNvA)**
 
-9. Comienzala instalación.
+9. Comienza la instalación.
    
    **![](https://lh7-us.googleusercontent.com/6XNlUr2UXTs3x8TLlbFg7dFvREjaK_OdHS18TubXRkGIehTKDjtpN69i1qxYgW3ELQ49kQRPMTHzEmyhz7A1G68DpiqCfJGvw7JUqkkChPxsDJRI1ez7JnMuML9lPpM9TcR0yGK45YVNfG2YhpInf5c)**
 
@@ -296,7 +262,7 @@ PostgreSQL, un sistema de gestión de bases de datos relacional de código abier
 
 2. Si puedes iniciar sesión sin errores, la instalación fue exitosa.
 
-¡Enhorabuena! Has completado con éxito la instalación de PostgreSQL. Este logro marca un paso adicional hacia la configuración completa de nuestro entorno para comenzarel curso. ¡Estamoslistos para avanzar!
+¡Enhorabuena! Has completado con éxito la instalación de PostgreSQL. Este logro marca un paso adicional hacia la configuración completa de nuestro entorno para comenzar el curso. ¡Estamos listos para avanzar!
 
 ### **Postman**
 
@@ -314,13 +280,124 @@ Postman es una plataforma colaborativa que proporciona un entorno completo para 
 
 ##### **Paso 2: Instalar Postman**
 
-1. Ejecutael instaladordescargado.
-2. Siguelasinstruccionesdelasistentede instalación.
+1. Ejecuta el instalador descargado.
+2. Sigue las instrucciones del asistente de instalación.
 3. Finalizala instalación.
 
 ##### **Paso 3: Iniciar Postman**
 
-1. Despuésde la instalación,busca el iconode Postman en tu sistemay ábrelo.
-2. En la primera ejecución, Postman te pedirá que inicies sesión o crees una cuenta. Puedes optar por hacerlo o simplemente cerrar la ventana para accedera Postman sin iniciarsesión.
+1. Después de la instalación,busca el icono de Postman en tu sistema y ábrelo.
+2. En la primera ejecución, Postman te pedirá que inicies sesión o crees una cuenta. Puedes optar por hacerlo o simplemente cerrar la ventana para acceder a Postman sin iniciarsesión.
 
 ¡Felicidades! Has instalado Postman con éxito. Estamos listos para iniciar con el curso.
+
+### **cURL**
+
+cURL es una herramienta de línea de comandos que permite transferir datos utilizando diversos protocolos, como HTTP, HTTPS, FTP, entre otros.
+
+##### **Paso 1: **Descargar cURL
+
+1. Abre tu navegador web y visita el sitio oficial de cURL en https://curl.se/windows/. 
+
+2. En la sección "Win64 - Generic", haz clic en el enlace para descargar la versión más reciente de cURL para Windows 64-bit.
+
+   ![Texto Alternativo](img/windows/curl/download.png)
+
+##### **Paso 2: **Instalar cURL
+
+1. Una vez que se complete la descarga, haz doble clic en el archivo descargado para descomprimir.
+
+   ![Texto Alternativo](img/windows/curl/unzip.png)
+
+2. La carpeta descomprimida, puedes moverla a tu directorio de programas instalados, esto con el fin de mantener ordenado el directorio de programas.
+
+**Paso 3: Configurar Variables de Entorno**
+
+1. Abre el menú de inicio de Windows y busca "Editar variables de entorno del sistema".
+
+   ![Texto Alternativo](img/windows/curl/variables1.png)
+
+2. En la sección "Variables del sistema", selecciona la variable "Path" y haz clic en "Editar".
+
+   ![Texto Alternativo](img/windows/curl/variables2.png)
+
+3. Haz clic en "Nuevo" y agrega la ruta de la carpeta donde se instaló cURL (por ejemplo, "C:\Program Files\cURL").
+
+   ![Texto Alternativo](img/windows/curl/variables3.png)
+
+4. Haz clic en "Aceptar" para guardar los cambios y cerrar todas las ventanas.
+
+**Paso 4: Verificar la Instalación**
+
+1. Abre la línea de comandos de Windows.
+2. Escribe el siguiente comando y presiona Enter: `curl --version`.
+3. Si cURL se instaló correctamente, verás la información de la versión de cURL en la línea de comandos.
+
+![Texto Alternativo](img/windows/curl/version.png)
+
+¡Felicidades! Has instalado cURL en tu sistema Windows. Ahora ya podemos utilizar esta potente herramienta para realizar transferencias de datos desde la línea de comandos a lo largo del curso.
+
+### APACHE**MAVEN**
+
+Apache Maven es una poderosa herramienta de gestión de proyectos y construcción de software utilizada principalmente para proyectos Java.
+
+##### **Paso 1: **Descargar Apache Maven
+
+1. Abre tu navegador web y visita el sitio oficial de Apache Maven en https://maven.apache.org/download.cgi.
+
+   ![Texto Alternativo](img/windows/maven/pagina.png)
+
+2. En la sección "Files", busca la última versión de Apache Maven Binary zip archive. Esto será un archivo comprimido con extensión ".zip".
+
+3. Haz clic en el enlace de descarga para comenzar la descarga del archivo ZIP de Apache Maven.
+
+**Paso 2: Descomprimir Apache Maven:**
+
+1. Una vez completada la descarga, navega hasta la carpeta donde se descargó el archivo ZIP de Apache Maven (generalmente la carpeta "Descargas").
+
+2. Haz clic derecho en el archivo ZIP de Apache Maven y selecciona "Extraer todo" en el menú contextual.
+
+3. Selecciona una ubicación para extraer los archivos de Maven y haz clic en "Extraer". Esto creará una carpeta con el nombre de la versión de Maven (por ejemplo, "apache-maven-3.9.6").
+
+   ![Texto Alternativo](img/windows/maven/unzip.png)
+
+4. La carpeta que se extrae hay que moverla a la carpeta de archivos instalados para mantener la organización de los archivos de instalación.
+
+**Paso 3: Configurar Variables de Entorno**
+
+1. Abre el menú de inicio de Windows y busca "Editar variables de entorno del sistema".
+
+   ![Texto Alternativo](img/windows/curl/variables1.png)
+
+2. En el campo "Nombre de la variable", ingresa `M2_HOME`.
+
+   ![Texto Alternativo](img/windows/maven/variables2.png)
+
+3. En el campo "Valor de la variable", ingresa la ruta completa de la carpeta de Apache Maven que extrajiste anteriormente (por ejemplo, `C:\ruta\a\apache-maven-3.9.6`).
+
+4. Haz clic en "Aceptar" para guardar la nueva variable de entorno.
+
+5. En la sección "Variables del sistema", busca la variable `Path` y haz clic en "Editar".
+
+   ![Texto Alternativo](img/windows/curl/variables2.png)
+
+6. En la ventana de edición de la variable `Path`, haz clic en "Nuevo" y luego ingresa `%M2_HOME%\bin`.
+
+7. Haz clic en "Aceptar" para guardar los cambios.
+
+   ![Texto Alternativo](img/windows/maven/variables3.png)
+
+8. Haz clic en "Aceptar" para guardar los cambios y cerrar todas las ventanas.
+
+**Paso 4: Verificar la Instalación:**
+
+1. Abre una nueva ventana de símbolo del sistema o PowerShell.
+2. Escribe el siguiente comando y presiona Enter: `mvn --version`.
+3. Si Apache Maven se instaló correctamente, verás la información de la versión de Maven en la línea de comandos.
+
+![Texto Alternativo](img/windows/maven/version.png)
+
+¡Felicidades! Has instalado Apache Maven en tu sistema Windows. Ahora podremos comenzar a utilizar Maven para gestionar los proyectos del curso de manera eficiente.
+
+
+
