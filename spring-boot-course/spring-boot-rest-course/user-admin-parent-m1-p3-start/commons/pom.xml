@@ -11,6 +11,7 @@
   <artifactId>commons-m1-p3-start</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <name>commons</name>
+  <description>Spring Boot Rest Course - Module1-Practice3-Start</description>
   <url>http://maven.apache.org</url>
   <dependencies>
     
@@ -105,11 +106,12 @@
   </dependencies>
 
   <build>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
-	</build>
+    <finalName>commons-${version}</finalName>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
+  </build>
 </project>
