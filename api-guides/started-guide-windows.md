@@ -18,15 +18,15 @@ Comenzamos con el más importante que es el Kit de Desarrollo de Software (SDK p
    
    **![](https://lh7-us.googleusercontent.com/8_qpVv-6mqAgUidRVF_gXccorC6rBgmEKXaF1GBzPfI8n4RAASm764SjjaaDNISZ9vtdouuedTdm8FPnSkLftL1fA0WTrUoG6_xXqJVuZW19ftcsHaFRoCaMKFZQ8_MTbPILX__Mhd7B8UoT-9Vq2sE)**
 
-3. Vamos a seleccionarx64 MSI Installer.
+3. Vamos a seleccionar x64 MSI Installer.
 
 4. Acepta los términos de la licencia y descarga el instalador.
 
 ##### **Paso 2: Instalar el JDK**
 
-1. Ejecuta el instaladordescargado.
+1. Ejecuta el instalador descargado.
 
-2. Una vez termine la descarga del archivo .msi debes dar doble clic en dicho archivo y aparecerá el instaladorde nuestra OpenJDK:
+2. Una vez termine la descarga del archivo .msi debes dar doble clic en dicho archivo y aparecerá el instalador de nuestra OpenJDK:
    
    **![](https://lh7-us.googleusercontent.com/ME-iptkTwZmRmolOyrV8rYmeNuvWny7vaqK6jwNd178lbubGvWpQaaE2wvbHeRx5geFfiKXWndYRL90qTz4ktIrQ5fcMREnRPusYTSnr9mdxft07OP2mx-WOyHetC1A-vP882xoaWZucOA6tw1ZLv1o)**
 
@@ -174,7 +174,7 @@ PostgreSQL, un sistema de gestión de bases de datos relacional de código abier
    
    **![](https://lh7-us.googleusercontent.com/F9dTp98wG5ofb0FQnTAAH-F1gf94KMa7xkMi-ZPy1bQvptmdSxgki7uVWNn9tC0uZ0kBUIzO2KB856LokV7JOnG4wZarPHrBcD-lyQg7bp8iTQQ3aohhyt1yOqbeZ3YmJOaU4_TuziZnCcwJ6GCC8EI)**
 
-5. Establece una contraseña para el superusuario (postgres). Asegúrate de recordar estacontraseña,ya que la necesitarás más adelante. 
+5. Establece una contraseña para el super usuario (postgres). Asegúrate de recordar esta contraseña,ya que la necesitarás más adelante. 
    
    **![](https://lh7-us.googleusercontent.com/LABuAiXG3biXDBlIllZQkujYmxGgbKqzMd0bqw1lawLhufC4dZ7WGOvifMjQNjvC7aBNnxHXD4VLVjn5LcMif3eSFk_d-68PhHDZeeja63FFzv6G2aWeZ4avpPN7YVd3X-m3NC02z0dqww8dqcFPe-0)**
 
@@ -202,7 +202,7 @@ PostgreSQL, un sistema de gestión de bases de datos relacional de código abier
     
     **![](https://lh7-us.googleusercontent.com/p4lrmWmMK-DzzIkgvysAG1-1VWo_J47Z5sSda4wmitWDYDFW9yCGcQULPIZlHHz62Ip3Ut-ml-qS0p1saknYpiwZ6HHZBNwmrU-flbyUF5hGRUNT2sGTIryoZlhtgxbjYskul01gnkZLu3SudzWwrOY)**
 
-12. En la siguiente pantalla seleccionaremos la opción `pgJDBC v42.6.0-1` que permitela conectividad Java a PostgreSQL mediante JDBC.
+12. En la siguiente pantalla seleccionaremos la opción `pgJDBC v42.6.0-1` que permite la conectividad Java a PostgreSQL mediante JDBC.
     
     **![](https://lh7-us.googleusercontent.com/TdPEZYZv_u6qjtTad91SVPH15pyzm9eYzPiUZHCJgdT9-ZafInb95VvCYS0kJv1cNn-lTZmg1J-Y47YPEU3hxf7J450ge5c3VcBbS0W5wAoDHUp08p8Qyjw1U90cg_87ruZQ5_ovC9C8HsYa8jG8qvc)**
 
@@ -218,7 +218,7 @@ PostgreSQL, un sistema de gestión de bases de datos relacional de código abier
     
     **![](https://lh7-us.googleusercontent.com/oqGW0x6S4gdcXrE1i66akaIpnHA4yWz2UrUfKXc_yRT4B6C380HKFtOL5AcqHKCUcmvMkJIRL6Qf1jjCl4vI0GN9L8aUl22VQ98McESHk6pKMvdsNn6D4R7uIyvhucdNSBaswG0g-JO8mweDGTVN-ho)**
 
-16.Finalizamos con éxito la instalación.
+16. Finalizamos con éxito la instalación.
 
 **![](https://lh7-us.googleusercontent.com/x3fHQf-gQPs8pC19dZiDelotY4pC4r4cTEpSrhCv-1th-ZFEKkcKsyYypQL58OolOG9qCCAWawurBHym-Wpndm2YTTEFVT37lSU5C8fQvkzqQBo07133KAQWuyIh86k5r7AvU3n_dTmkRcWkbxBIm9Q)**
 
@@ -256,7 +256,7 @@ PostgreSQL, un sistema de gestión de bases de datos relacional de código abier
 
 ##### **Paso 4: Verificar instalación**
 
-1. Abre el símbolo del sistema y ejecuta el siguiente comando para conectarsea PostgreSQL: `psql -U postgres -p 5433` e ingresarás tu contraseña (Paso 2-punto 5).
+1. Abre el símbolo del sistema y ejecuta el siguiente comando para conectarse a PostgreSQL: `psql -U postgres -p 5433` e ingresarás tu contraseña (Paso 2-punto 5).
    
    **![](https://lh7-us.googleusercontent.com/HBbSWgsJF6O0q3cNrzaaA2fvmURR6PUPCdn6Uw1n_ipVL7z9GC-8_CH_xr4rM2LZzJQvS0KE_jqijxN5Dbf_BEPVsaMSwTqzgM0TrHjVM7soFnExVfjhvdpRk2t68nsRcCN-1vxaVvI6GjnPbB4nXIY)**
 
@@ -289,7 +289,7 @@ Postman es una plataforma colaborativa que proporciona un entorno completo para 
 1. Después de la instalación,busca el icono de Postman en tu sistema y ábrelo.
 2. En la primera ejecución, Postman te pedirá que inicies sesión o crees una cuenta. Puedes optar por hacerlo o simplemente cerrar la ventana para acceder a Postman sin iniciarsesión.
 
-¡Felicidades! Has instalado Postman con éxito. Estamos listos para iniciar con el curso.
+¡Felicidades! Has instalado Postman con éxito. 
 
 ### **cURL**
 
@@ -399,5 +399,66 @@ Apache Maven es una poderosa herramienta de gestión de proyectos y construcció
 
 ¡Felicidades! Has instalado Apache Maven en tu sistema Windows. Ahora podremos comenzar a utilizar Maven para gestionar los proyectos del curso de manera eficiente.
 
+### **OPEN SSL**
 
+OpenSSL es una herramienta de código abierto que se utiliza para implementar protocolos de seguridad SSL/TLS en aplicaciones web y de red. 
 
+**Paso 1: Descargar e Instalar OPEN SSL**
+
+1. Visita el sitio web oficial de Shining Light Production (https://slproweb.com/products/Win32OpenSSL.html) y descarga el instalador (exe) dependiendo la versión de tu procesador (32 o 64 bits) y seleccionando el completo, no el Light.
+
+   ![Texto Alternativo](img/windows/openssl/img1.png)
+
+   ![Texto Alternativo](img/windows/openssl/img2.png)
+
+2. Ejecuta el instalador descargado. 
+
+   ![Texto Alternativo](img/windows/openssl/img3.png)
+
+3. Selecciona la ruta de instalación de tu equipo.
+
+   ![Texto Alternativo](img/windows/openssl/img4.png)
+
+   ![Texto Alternativo](img/windows/openssl/img5.png)
+
+4. Selecciona el directorio de instalación en tu sistema.
+
+   ![Texto Alternativo](img/windows/openssl/img6.png)
+
+5. Se muestra un resumen de instalación, da clic en "Install". 
+
+   ![Texto Alternativo](img/windows/openssl/img7.png)
+
+6. Comienza la instalación.
+
+   ![Texto Alternativo](img/windows/openssl/img8.png)
+
+7. Finaliza la instalación.
+
+   ![Texto Alternativo](img/windows/openssl/img9.png)
+
+**Paso 2: Configurar Variables de Entorno**
+
+1. Abre el menú de inicio de Windows y busca "Editar variables de entorno del sistema".
+
+   ![Texto Alternativo](img/windows/curl/variables1.png)
+
+2. En la sección "Variables del sistema", selecciona la variable "Path" y haz clic en "Editar".
+
+   ![Texto Alternativo](img/windows/curl/variables2.png)
+
+3. Haz clic en "Nuevo" y agrega la ruta de la carpeta donde se instaló OpenSSL (por ejemplo, "C:\Program Files\OpenSSL-Win64\bin").
+
+   ![Texto Alternativo](img/windows/openssl/img10.png)
+
+4. Haz clic en "Aceptar" para guardar los cambios y cerrar todas las ventanas.
+
+**Paso 4: Verificar la Instalación**
+
+1. Abre la línea de comandos de Windows.
+2. Escribe el siguiente comando y presiona Enter: `openssl --version`.
+3. Si OpenSSL se instaló correctamente, podrás visualizar la versión instalada en tu equipo de OpenSSL.
+
+![Texto Alternativo](img/windows/openssl/img11.png)
+
+¡Felicidades! Has instalado OpenSSL correctamente en tu sistema Windows. Ahora puedes utilizar OpenSSL para implementar protocolos de seguridad SSL/TLS en tus aplicaciones web y de red.
