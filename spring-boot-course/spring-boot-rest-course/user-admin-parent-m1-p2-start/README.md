@@ -5,11 +5,11 @@ Notion Link: https://www.notion.so/Lecci-n-Manejo-de-excepciones-y-c-digos-de-es
 
 # Lección - Manejo de excepciones y códigos de estado HTTP.
 
-### Objetivo
+## Objetivo
 
 Para esta lección, el objetivo es que los estudiantes comprendan y puedan implementar un manejo efectivo de excepciones y códigos de estado HTTP en sus aplicaciones Spring Boot. 
 
-### ¿Que temas vamos a aprender?
+## ¿Que temas vamos a aprender?
 
 **Manejo de Excepciones:**
 
@@ -28,17 +28,19 @@ Para esta lección, el objetivo es que los estudiantes comprendan y puedan imple
 
 - Configurar todas las respuestas correctas al cliente final.
 
-### Readme para la clase
+## Contenido
 
-**Nota:** Para Windows debes ejecutar el comando en la última versión de PowerShell. Si tienes duda, revisa el manual de herramientas.
-
-------
+### 1. Creación de proyectos
 
 **Comando**
 
+**Nota:** Para Windows debes ejecutar el comando en la última versión de PowerShell. Si tienes duda, revisa el manual de herramientas.
+
 Mac, Linux o Windows
 
-`curl https://start.spring.io`
+```
+curl https://start.spring.io
+```
 
 **Descripción**
 
@@ -47,6 +49,8 @@ Al ejecutar este comando estás accediendo al servicio web de Spring Initializer
 ------
 
 **Comando**
+
+**Nota:** Para Windows debes ejecutar el comando en la última versión de PowerShell. Si tienes duda, revisa el manual de herramientas.
 
 Mac o Linux
 
@@ -80,48 +84,6 @@ Windows. Paso 2
 
 ```
 Expand-Archive -Path user-admin-parent-m1-p2-start.zip -DestinationPath .\
-```
-
-**Descripción**
-
-Este comando utiliza `curl` para generar un proyecto de Spring Boot desde Spring Initializer, utilizando las configuraciones especificadas, y luego descomprime el archivo ZIP del proyecto en el directorio local. Esto nos permite generar rápidamente proyectos de Spring Boot con las dependencias y configuraciones deseadas desde la línea de comandos.
-
-- `curl https://start.spring.io/starter.zip`: Este comando utiliza `curl` para realizar una solicitud HTTP GET a `https://start.spring.io/starter.zip`. 
-
-- `-d bootVersion=3.1.1`: Aquí se especifica una opción `-d`, que se utiliza para enviar datos en la solicitud HTTP. En este caso, se está enviando el parámetro `bootVersion` con el valor `3.1.1`. Esto indica que queremos generar un proyecto de Spring Boot con la versión 3.1.1 de Spring Boot.
-
-- `-d groupId=com.apixcloud.app`: Este parámetro indica el ID del grupo para el proyecto. En este caso, se establece como `com.apixcloud.app`.
-
-- `-d artifactId=user-admin-parent-m1-p2-start`: Este parámetro indica el ID del artefacto para el proyecto. En este caso, se establece como `user-admin-parent-m1-p2-start`.
-
-- `-d dependencies=web`: Aquí se especifican las dependencias que queremos incluir en el proyecto. En este caso, se incluye la dependencia `web`, que proporciona soporte para la creación de aplicaciones web con Spring Boot.
-
-- `-d version=0.1.0-SNAPSHOT`: Este parámetro especifica la versión del proyecto. En este caso, se establece como `0.1.0-SNAPSHOT`.
-
-- `-d type=maven-project`: Este parámetro indica el tipo de proyecto que queremos generar. En este caso, se especifica que queremos un proyecto de tipo Maven.
-
-- `-d baseDir=user-admin-parent-m1-p2-start`: Este parámetro especifica el directorio base para el proyecto. En este caso, se establece como `user-admin-parent-m1-p2-start`.
-
-- `-o user-admin-parent-m1-p2-start.zip`: Con esta opción, `curl` guarda la respuesta de la solicitud HTTP en un archivo local llamado `user-admin-parent-m1-p2-start.zip`.
-
-- En MAC o Linux
-
-  `| tar -xzvf - && cd user-admin-parent-m1-p2-start`
-
-  En Windows: 
-
-  `| Expand-Archive -Path user-admin-parent-m1-p2-start.zip -DestinationPath .\user-admin-parent-m1-p2-start`
-
-  Después de que `curl` descargue el archivo ZIP del proyecto, el operador de canal (`|`) redirige la salida de `curl` para descomprimir el archivo ZIP en el directorio actual, utilizando el nombre de archivo `user-admin-parent-m1-p2-start.zip` y extrayendo los archivos en la carpeta `.\user-admin-parent-m1-p2-start`.
-
-------
-
-Esto que :
-
-Entrar al archivo pom.xml del proyecto creado “user-admin-parent-m1-p2-start” y agregar la siguiente linea: Donde va ? despues de que? 
-
-```xml
-<packaging>pom</packaging>
 ```
 
 ------
@@ -162,34 +124,182 @@ Windows. Paso 2
 Expand-Archive -Path commons.zip -DestinationPath .\
 ```
 
-**Descripción**
+------
 
-PAra que
+**Comando**
+
+Mac o Linux
+
+```
+curl https://start.spring.io/starter.tgz \
+-d bootVersion=3.1.1 \
+-d groupId=com.apixcloud.users \
+-d artifactId=user-service-m1-p3-start \
+-d dependencies=web,devtools,actuator \
+-d version=0.1.0-SNAPSHOT \
+-d type=maven-project \
+-d baseDir=users-service \
+| tar -xzvf - && users-service
+```
+
+Windows. Paso 1
+
+```
+curl https://start.spring.io/starter.zip `
+-d bootVersion=3.1.1 `
+-d groupId=com.apixcloud.users `
+-d artifactId=user-service-m1-p3-start `
+-d dependencies=web,devtools,actuator `
+-d version=0.1.0-SNAPSHOT `
+-d type=maven-project `
+-d baseDir=users-service `
+-o users-service.zip
+```
+
+Windows. Paso 2
+
+```
+Expand-Archive -Path users-service.zip -DestinationPath .\
+```
+
+------
+
+**Descripción**
 
 - `curl https://start.spring.io/starter.zip`: Este comando utiliza `curl` para realizar una solicitud HTTP GET a `https://start.spring.io/starter.zip`. 
 
-- `-d bootVersion=3.1.1`: Aquí se especifica una opción `-d`, que se utiliza para enviar datos en la solicitud HTTP. En este caso, se está enviando el parámetro `bootVersion` con el valor `3.1.1`. Esto indica que queremos generar un proyecto de Spring Boot con la versión 3.1.1 de Spring Boot.
+- `-d bootVersion`: Aquí se especifica una opción `-d`, que se utiliza para enviar datos en la solicitud HTTP. En este caso, se está enviando el parámetro `bootVersion` con el valor `3.1.1`. Esto indica que queremos generar un proyecto de Spring Boot con la versión 3.1.1 de Spring Boot.
 
-- `-d groupId=com.apixcloud.app`: Este parámetro indica el ID del grupo para el proyecto. En este caso, se establece como `com.apixcloud.app`.
+- `-d groupId: Este parámetro indica el ID del grupo para el proyecto.
 
-- `-d artifactId=user-admin-parent-m1-p2-start`: Este parámetro indica el ID del artefacto para el proyecto. En este caso, se establece como `user-admin-parent-m1-p2-start`.
+- `-d artifactId: Este parámetro indica el ID del artefacto para el proyecto.
 
-- `-d dependencies=web`: Aquí se especifican las dependencias que queremos incluir en el proyecto. En este caso, se incluye la dependencia `web`, que proporciona soporte para la creación de aplicaciones web con Spring Boot.
+- `-d dependencies: Aquí se especifican las dependencias que queremos incluir en el proyecto. 
 
-- `-d version=0.1.0-SNAPSHOT`: Este parámetro especifica la versión del proyecto. En este caso, se establece como `0.1.0-SNAPSHOT`.
+- `-d version`: Este parámetro especifica la versión del proyecto. 
 
-- `-d type=maven-project`: Este parámetro indica el tipo de proyecto que queremos generar. En este caso, se especifica que queremos un proyecto de tipo Maven.
+- `-d type`: Este parámetro indica el tipo de proyecto que queremos generar. 
 
-- `-d baseDir=user-admin-parent-m1-p2-start`: Este parámetro especifica el directorio base para el proyecto. En este caso, se establece como `user-admin-parent-m1-p2-start`.
+- `-d baseDir`: Este parámetro especifica el directorio base para el proyecto. 
 
-- `-o user-admin-parent-m1-p2-start.zip`: Con esta opción, `curl` guarda la respuesta de la solicitud HTTP en un archivo local llamado `user-admin-parent-m1-p2-start.zip`.
+- `-o archivo.extensión`: Con esta opción, `curl` guarda la respuesta de la solicitud HTTP en un archivo local con su respectiva extensión.
 
 - En MAC o Linux
 
-  `| tar -xzvf - && cd user-admin-parent-m1-p2-start`
+  `| tar -xzvf`
 
   En Windows: 
 
-  `| Expand-Archive -Path user-admin-parent-m1-p2-start.zip -DestinationPath .\user-admin-parent-m1-p2-start`
+  `| Expand-Archive -Path archivo.zip -DestinationPath .\archivo`
 
-  Después de que `curl` descargue el archivo ZIP del proyecto, el operador de canal (`|`) redirige la salida de `curl` para descomprimir el archivo ZIP en el directorio actual, utilizando el nombre de archivo `user-admin-parent-m1-p2-start.zip` y extrayendo los archivos en la carpeta `.\user-admin-parent-m1-p2-start`.
+  Después de que `curl` descargue el archivo ZIP del proyecto, el operador de canal (`|`) redirige la salida de `curl` para descomprimir el archivo ZIP en el directorio actual, utilizando el nombre de archivo y extrayendo los archivos en la carpeta raíz.
+
+### 2. Configuración de los proyectos 
+
+**user-admin-parent-m1-p2-start**
+
+Abriremos el proyecto en nuestro entorno de desarrollo integrado (IDE) y procederemos a modificar el archivo pom.xml mediante la adición de la siguiente línea de código XML:
+
+```xml
+<packaging>pom</packaging>
+```
+
+**commons**
+
+Abriremos el proyecto en nuestro entorno de desarrollo integrado (IDE) y editaremos el archivo pom.xml, reemplazando el bloque `parents` con el siguiente código XML:
+
+```xml
+<parent>
+    <groupId>com.apixcloud.app</groupId>
+    <artifactId>user-admin-parent-m1-p3-start</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <relativePath/> <!-- lookup parent from repository -->
+</parent>
+```
+
+Ahora bien, sobre el mismo archivo pom.xml, agregaremos un bloque que se muestra a continuación en el código XML:
+
+```xml
+<build>
+		<finalName>commons-${version}</finalName>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
+
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+```
+
+Este bloque nos va a permitir modificar la manera en que Spring Boot construye nuestro archivo JAR.
+
+**users-service**
+
+Abriremos el proyecto en nuestro entorno de desarrollo integrado (IDE) y editaremos el archivo pom.xml como se muestra a continuación en el código XML:
+
+```xml
+<build>
+		<finalName>users-service-${version}</finalName>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
+
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+```
+
+Este bloque nos va a permitir modificar la manera en que Spring Boot construye nuestro archivo JAR.
+
+### 2. Construcción de los proyectos 
+
+**commons**
+
+Ejecutar el comando para construir nuestro proyecto:
+
+```
+mvn clean install
+```
+
+
+
+
+
+## Recursos adicionales
+
+##### Maven “fileName”
+
+https://maven.apache.org/plugins/maven-jar-plugin/jar-mojo.html#finalName
+
+##### Versioning Semantic
+
+https://semver.org/
+
