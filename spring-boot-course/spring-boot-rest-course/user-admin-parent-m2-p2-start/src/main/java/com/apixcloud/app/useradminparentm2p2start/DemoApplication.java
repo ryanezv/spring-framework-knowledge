@@ -1,4 +1,4 @@
-package com.apixcloud.commons.commonsm2p1start;
+package com.apixcloud.app.useradminparentm2p2start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
