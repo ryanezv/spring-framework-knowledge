@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 
-import com.apixcloud.commons.utils.RestPreconditions;
+import com.apixcloud.commos.utils.RestPreconditions;
 import com.apixcloud.users.persistence.models.User;
 import com.apixcloud.users.persistence.models.UserEntity;
 import com.apixcloud.users.services.IUserService;
@@ -56,16 +56,18 @@ public class ControllerUsers {
 
     @RequestMapping(method=RequestMethod.GET)
     @ResponseBody
-    public List<User> findAll() {
-        return new ArrayList<>(mapUsers.values());
+    public List<UserEntity> findAll() {
+        //return new ArrayList<>(mapUsers.values());
+        return service.findAll();
     }
 
     /* find one user */
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
     @ResponseBody
-    public User findOne(@PathVariable("id") final int id) {
-        return mapUsers.get(id);
+    public UserEntity findOne(@PathVariable("id") final int id) {
+        return service.findOne(id);
+        //return mapUsers.get(id);
     }
     
     // create
@@ -75,8 +77,7 @@ public class ControllerUsers {
     public void create(@RequestBody final UserEntity user) {
         //mapUsers.put(mapUsers.size()+1, user);
         RestPreconditions.checkRequestElementNotNull(user);
-        RestPreconditions.checkRequestState(user.getId() == null);
-        
+        //RestPreconditions.checkRequestState(user.getId() == null);        
         service.create(user);
     }
 
@@ -84,8 +85,9 @@ public class ControllerUsers {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
-    public void update(@PathVariable("id") final int id, @RequestBody final User user) {
-        mapUsers.put(id, user);
+    public void update(@PathVariable("id") final int id, @RequestBody final UserEntity user) {
+        //mapUsers.put(id, user);
+        service.update(user);
     }
 
     // delete
@@ -93,6 +95,7 @@ public class ControllerUsers {
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") final int id) {
-        mapUsers.remove(id);
+        //mapUsers.remove(id);
+        service.delete(id);
     }
 }

@@ -1,6 +1,7 @@
 package com.apixcloud.users.services.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,15 +19,14 @@ public class UserService implements IUserService {
     private IUserJpaDao dao;
 
     @Override
-    public UserEntity findOne(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findOne'");
+    public UserEntity findOne(long id) {        
+        Optional<UserEntity> entity = dao.findById(id);
+        return entity.orElse(null);
     }
 
     @Override
-    public List<UserEntity> findAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findAll'");
+    public List<UserEntity> findAll() {        
+        return dao.findAll();
     }
 
     @Override
@@ -36,15 +36,16 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public void update(UserEntity resource) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+    public void update(UserEntity resource) {        
+        dao.save(resource);
     }
 
     @Override
     public void delete(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        Optional<UserEntity> entity = dao.findById(id);
+        if(entity.isPresent()){
+            dao.delete(entity.get());
+        }
     }
     
 }

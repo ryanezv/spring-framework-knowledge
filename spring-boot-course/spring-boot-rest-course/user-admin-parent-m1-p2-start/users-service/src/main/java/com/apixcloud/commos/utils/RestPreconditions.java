@@ -1,11 +1,8 @@
-package com.apixcloud.commons.utils;
+package com.apixcloud.commos.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
-
-//import com.apixcloud.commons.exceptions.MyBadRequestException;
-//import com.apixcloud.commons.exceptions.MyResourceNotFoundException;
 
 /**
  * Simple static methods to be called at the start of your own methods to verify
