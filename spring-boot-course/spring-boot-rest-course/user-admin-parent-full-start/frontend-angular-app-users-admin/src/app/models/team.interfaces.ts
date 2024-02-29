@@ -5,6 +5,7 @@ import { User } from "./user.interfaces";
 export interface Team {
   id: number;
   name: string;
+  description: string;
   users: User[];
   joinRequest: JoinRequest[];
   _links?: {

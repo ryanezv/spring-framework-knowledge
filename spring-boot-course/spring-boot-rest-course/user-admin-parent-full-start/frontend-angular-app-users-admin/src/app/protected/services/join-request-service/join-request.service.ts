@@ -20,10 +20,10 @@ export class JoinRequestService {
     };
 
     return this.http.post<NewJoinRequest>(`/api/teams/${teamToJoin}/send-join-request`, joinRequest).pipe(
-      tap(() => this.snack.open('Join Request sent', 'Close', snackBarConf)),
+      tap(() => this.snack.open('La solicitud ha sido enviada. Sera revisada por el administrador', 'Cerrar', snackBarConf)),
       catchError((error) => {
         if (error.status === 409) {
-          this.snack.open('Open Request to this team already exists', 'Close', snackBarConf);
+          this.snack.open('Ya existe una solicitud abierta para este curso', 'Cerrar', snackBarConf);
         }
         return of(error);
       })

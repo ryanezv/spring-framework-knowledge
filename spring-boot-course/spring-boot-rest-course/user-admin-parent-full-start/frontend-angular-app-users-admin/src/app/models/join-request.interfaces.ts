@@ -16,7 +16,7 @@ export interface HandleJoinRequest {
 }
 
 export enum JoinStatus {
-  'INQUIRY',
+  'PENDING',
   'ACCEPTED',
   'DECLINED'
 }

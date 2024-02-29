@@ -1,44 +1,44 @@
 <mat-card>
-  <mat-card-title>Update own Profile</mat-card-title>
+  <mat-card-title>Actualizar mi perfil</mat-card-title>
 
   <mat-card-content>
     <form [formGroup]="profileForm" (ngSubmit)="update()">
 
       <mat-form-field>
-        <input type="email" matInput placeholder="Email" formControlName="email">
+        <input type="email" matInput placeholder="Correo electronico" formControlName="email">
         <!-- Here we can display error messages/hints for the user, if one of the Validators adds an error to the email 
          with the .touched check we only display the hints if the input was touched by the users -->
         <mat-error
           *ngIf="this.profileForm.get('email')?.touched && this.profileForm.get('email')?.hasError('required')">
-          Email is required</mat-error>
+          El correo electronico es requerido</mat-error>
         <mat-error *ngIf="this.profileForm.get('email')?.touched && this.profileForm.get('email')?.hasError('email')">
-          Email must be a valid Email</mat-error>
+          El correo electronico debe ser valido</mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <input type="text" matInput placeholder="Username" formControlName="username">
+        <input type="text" matInput placeholder="Usuario" formControlName="username">
         <mat-error
           *ngIf="this.profileForm.get('username')?.touched && this.profileForm.get('username')?.hasError('required')">
-          Username is required</mat-error>
+          El usuario es requerido</mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <input type="text" matInput placeholder="First Name" formControlName="firstname">
+        <input type="text" matInput placeholder="Nombre(s)" formControlName="firstname">
         <mat-error
           *ngIf="this.profileForm.get('firstname')?.touched && this.profileForm.get('firstname')?.hasError('required')">
-          First Name is required</mat-error>
+          El nombre es requerido</mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <input type="text" matInput placeholder="Last Name" formControlName="lastname">
+        <input type="text" matInput placeholder="Apellido(s)" formControlName="lastname">
         <mat-error
           *ngIf="this.profileForm.get('lastname')?.touched && this.profileForm.get('lastname')?.hasError('required')">
-          Last Name is required</mat-error>
+          El apellido es requerido</mat-error>
       </mat-form-field>
 
       <div class="button">
         <!-- Button is disabled(not clickable), if our Form contains Validation Errors -->
-        <button type="submit" mat-button [disabled]="!profileForm.valid">Update Profile</button>
+        <button type="submit" mat-button [disabled]="!profileForm.valid">Actualizar perfil</button>
       </div>
 
     </form>

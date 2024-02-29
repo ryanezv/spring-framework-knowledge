@@ -29,13 +29,13 @@ export class AuthService {
     return this.http.post<AuthenticationResponse>('/api/auth/login', loginRequest).pipe(
       tap((res: AuthenticationResponse) => localStorage.setItem(LOCALSTORAGE_TOKEN_KEY, res.accessToken)),
       tap((res: AuthenticationResponse) => this.userState.setState(this.jwtService.decodeToken(res.accessToken))),
-      tap(() => this.snackbar.open('Login Successfull', 'Close', snackBarConf))
+      tap(() => this.snackbar.open('¡Acceso autorizado!', 'Cerrar', snackBarConf))
     );
   }
 
   register(registerRequest: RegisterRequest): Observable<User> {
     return this.http.post<User>('/api/users', registerRequest).pipe(
-      tap(() => this.snackbar.open(`User created successfully`, 'Close', snackBarConf))
+      tap(() => this.snackbar.open(`¡Usuario creado exitosamente!`, 'Cerrar', snackBarConf))
     );
   }
 

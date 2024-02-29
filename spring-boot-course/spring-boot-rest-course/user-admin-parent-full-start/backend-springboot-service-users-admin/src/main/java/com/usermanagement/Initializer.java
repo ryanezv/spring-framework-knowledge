@@ -33,8 +33,8 @@ public class Initializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         // Init User
-        User arnold = createUser("ArnoldTester", "Arnold", "Schwarzenegger", "password123", "arnold@schwarzenegger.com");
-        User dorian = createUser("DorianTester", "Dorian", "Yates", "PasswordToHash123", "dorian@yates.com");
+        User richard = createUser("ryanezv", "Ricardo", "Yanez", "admin123", "yanezv.ricardo@gmail.com");
+        User jovani = createUser("jovaniarz", "Jovani", "Arzate", "admin123", "jovani@apixcloud.com");
 
         // Create Roles and Privileges
         Privilege teamMemberPrivilege = createPrivilege(Privileges.MEMBER);
@@ -49,29 +49,31 @@ public class Initializer implements CommandLineRunner {
         Role memberRole = createRole(Roles.MEMBER, List.of(teamMemberPrivilege));
 
         // Init Team
-        CreateTeamRequest createManu = CreateTeamRequest.builder()
-                .name("Manu FC")
+        CreateTeamRequest courseApiRestSpringBoot = CreateTeamRequest.builder()
+                .name("Desarrollo de APIs REST con Spring Boot")
                 .build();
 
-        teamService.create(createManu, arnold);
+        teamService.create(courseApiRestSpringBoot, richard);
 
-        CreateTeamRequest createChelsea = CreateTeamRequest.builder()
-                .name("Chelsea")
+        CreateTeamRequest courseApigeeX = CreateTeamRequest.builder()
+                .name("Arquitecto de APIs con Apigee X")
                 .build();
 
-        teamService.create(createChelsea, dorian);
+        teamService.create(courseApigeeX, jovani);
 
         // Create more teams
-        teamService.create(CreateTeamRequest.builder().name("Bayern").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("Chelsea").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("Real").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("PSG").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("Marseille").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("Dortmund").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("Tottenham").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("Mailand").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("Rom").build(), dorian);
-        teamService.create(CreateTeamRequest.builder().name("City").build(), dorian);
+        teamService.create(CreateTeamRequest.builder().name("Cloud Architect AWS").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Desarrollo de Microservicios y AWS").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Cloud Architect en AWS").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Arquitectura de Microservicios y GCP").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Cloud Engineer en GCP").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Cloud Architect en GCP").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Desarrollo de aplicaciones con Kafka").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Desarrollo de APls REST con Apigee X").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("POO con Java + Plus Inteligencia").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Desarollo Web con REACTJS Y TYPESCRIPT").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("Cloud Architect en AWS for Girls").build(), jovani);
+        teamService.create(CreateTeamRequest.builder().name("AWS Lambda / Apps serverless").build(), jovani);
 
     }
 

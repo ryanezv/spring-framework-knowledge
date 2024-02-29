@@ -35,20 +35,20 @@ public class JoinRequestService {
 
         // build join Request
         JoinRequest joinRequest = JoinRequest.builder()
-                .joinStatus(JoinStatus.INQUIRY)
+                .joinStatus(JoinStatus.PENDING)
                 .team(team)
                 .user(user)
                 .build();
 
         // Check if user already in team
         if (user.getTeams().stream().anyMatch(ut -> Objects.equals(ut.getTeam().getId(), team.getId()))) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "User already in team");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "User already in course");
         }
 
         // check for open requests to same team from user
-        if (joinRequest.getJoinStatus() == JoinStatus.INQUIRY) {
+        if (joinRequest.getJoinStatus() == JoinStatus.PENDING) {
             if (joinRequestRepository.existsByJoinStatusAndTeamAndUser(joinRequest.getJoinStatus(), joinRequest.getTeam(), joinRequest.getUser())) {
-                throw new ResponseStatusException(HttpStatus.CONFLICT, "Open Request to this team already exists");
+                throw new ResponseStatusException(HttpStatus.CONFLICT, "Open Request to this course already exists");
             }
         }
 
@@ -69,7 +69,7 @@ public class JoinRequestService {
         User user = userService.findById(userId);
         Team team = teamService.findById(teamId);
 
-        return joinRequestRepository.existsByJoinStatusAndTeamAndUser(JoinStatus.INQUIRY, team, user);
+        return joinRequestRepository.existsByJoinStatusAndTeamAndUser(JoinStatus.PENDING, team, user);
     }
 
     // handle a join request
@@ -78,7 +78,7 @@ public class JoinRequestService {
         JoinRequest joinRequest = findById(id);
 
         // if joinRequest Status in Database is not INQUIRY, then throw an Exc
-        if (joinRequest.getJoinStatus() != JoinStatus.INQUIRY) {
+        if (joinRequest.getJoinStatus() != JoinStatus.PENDING) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Join Request alrady accepted/declined.");
         }
 

@@ -55,7 +55,7 @@ export class TeamMemberManagementComponent {
 
     dialogRef.afterClosed().pipe(
       switchMap((newRole: Role) => this.teamService.updateRoleOfUser(newRole, this.team!, userTeam.user).pipe(
-        tap(() => this.snack.open('User Role was updatet', 'Close', snackBarConf)),
+        tap(() => this.snack.open('El rol del usuario fue actualizado', 'Cerrar', snackBarConf)),
         tap(() => this.router.navigate([]))
       ))
     ).subscribe(result => {

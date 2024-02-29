@@ -37,7 +37,7 @@ export class TeamService {
     return this.http.post<string>(`/api/teams/${team.id}/users/${user.id}/leave`, {}).pipe(
       catchError((error) => {
         if (error.status === 403) {
-          this.snackbar.open(`User is last Admin in Team. Can't be removed. Please contact an Admin (This feature is not implemented atm)`, 'Close', snackBarConf);
+          this.snackbar.open(`El usuario es el ultimo ADMIN del curso. No puede ser eliminado. Por favor contacte con el administrador.`, 'Cerrar', snackBarConf);
         }
         return of(error);
       })
@@ -48,7 +48,8 @@ export class TeamService {
     return this.http.put<UserTeamRelation>(`/api/teams/${team.id}/users/${user.id}/update-role`, {role: role}).pipe(
       catchError((error) => {
         if (error.status === 403) {
-          this.snackbar.open(`User is last Admin in Team. Can't change Role. Please contact an Admin (This feature is not implemented atm)`, 'Close', snackBarConf);
+          this.snackbar.open(`User is last Admin in Team. Can't change Role. Please contact an Admin (This feature is not implemented atm)`, 'Cerrar', snackBarConf);
+          this.snackbar.open(`El usuario es el ultimo ADMIN del curso. No puede ser cambiado el rol. Por favor contacte con el administrador.`, 'Cerrar', snackBarConf);
         }
         return of(error);
       })

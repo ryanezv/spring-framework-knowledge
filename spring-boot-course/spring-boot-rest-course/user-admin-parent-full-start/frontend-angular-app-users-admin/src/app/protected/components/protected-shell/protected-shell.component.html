@@ -11,31 +11,31 @@
 
       <mat-list-item [routerLink]="'/protected/dashboard'">
         <mat-icon mat-list-icon>home</mat-icon>
-        <span *ngIf="isExpanded" class="menu-item">Dashboard</span>
+        <span *ngIf="isExpanded" class="menu-item">Inicio</span>
       </mat-list-item>
 
       <mat-list-item [routerLink]="'teams'">
         <mat-icon mat-list-icon>important_devices</mat-icon>
-        <span *ngIf="isExpanded" class="menu-item">All Teams</span>
+        <span *ngIf="isExpanded" class="menu-item">Todos los cursos</span>
       </mat-list-item>
 
       <mat-list-item [routerLink]="'users'">
         <mat-icon mat-list-icon>supervisor_account</mat-icon>
-        <span *ngIf="isExpanded" class="menu-item">UserManagement</span>
+        <span *ngIf="isExpanded" class="menu-item">Administrador de usuarios</span>
       </mat-list-item>
 
       <mat-divider></mat-divider>
 
       <mat-list-item [routerLink]="'my-profile'">
         <mat-icon mat-list-icon>account_circle</mat-icon>
-        <span *ngIf="isExpanded" class="menu-item">My Profile</span>
+        <span *ngIf="isExpanded" class="menu-item">Mi perfil</span>
       </mat-list-item>
 
       <mat-divider></mat-divider>
 
       <mat-list-item (click)="logout()">
         <mat-icon mat-list-icon>logout</mat-icon>
-        <span *ngIf="isExpanded" class="menu-item">Logout</span>
+        <span *ngIf="isExpanded" class="menu-item">Salir</span>
       </mat-list-item>
 
     </mat-nav-list>
@@ -44,7 +44,7 @@
 
   <mat-sidenav-content>
     <mat-toolbar>
-      <h4>Hi {{ username }}</h4>
+      <h4>Hola {{ username }}</h4>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

@@ -9,7 +9,7 @@ import { UserState } from 'src/app/root-states/user.state';
   styleUrls: ['./protected-shell.component.scss'],
 })
 export class ProtectedShellComponent {
-  isExpanded = false;
+  isExpanded = true;
   username = this.userState.snapshot.username;
 
   constructor(private router: Router, private userState: UserState) {}

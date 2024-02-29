@@ -3,7 +3,7 @@
 
 <div>
   <div style="display:flex; flex-direction: row; justify-content: space-between;">
-    <h1> Team: {{ team?.name }}</h1>
+    <h1> Curso: {{ team?.name }}</h1>
   </div>
 
   <mat-divider></mat-divider>
@@ -17,7 +17,7 @@
 
 <ng-template #membersOutlet>
 
-  <h2>Members of {{team?.name}}:</h2>
+  <h2>Listado de usuarios inscriptos al curso {{team?.name}}</h2>
 
   <table mat-table [dataSource]="membersDataSource" class="mat-elevation-z8">
 
@@ -29,34 +29,34 @@
 
     <!-- Email Column -->
     <ng-container matColumnDef="email">
-      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <th mat-header-cell *matHeaderCellDef> Correo electronico </th>
       <td mat-cell *matCellDef="let member"> {{member.user.email}} </td>
     </ng-container>
 
     <!-- Firstname Column -->
     <ng-container matColumnDef="firstname">
-      <th mat-header-cell *matHeaderCellDef> Firstname </th>
+      <th mat-header-cell *matHeaderCellDef> Nombre(s) </th>
       <td mat-cell *matCellDef="let member"> {{member.user.firstname}} </td>
     </ng-container>
 
     <!-- Lastname Column -->
     <ng-container matColumnDef="lastname">
-      <th mat-header-cell *matHeaderCellDef> Lastname </th>
+      <th mat-header-cell *matHeaderCellDef> Apellido(s) </th>
       <td mat-cell *matCellDef="let member"> {{member.user.lastname}} </td>
     </ng-container>
 
     <!-- Role Column -->
     <ng-container matColumnDef="role">
-      <th mat-header-cell *matHeaderCellDef> Role </th>
+      <th mat-header-cell *matHeaderCellDef> Rol </th>
       <td mat-cell *matCellDef="let member"> {{member.role.role}} </td>
     </ng-container>
 
     <!-- Action Column, e.g. remove user from team -->
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
       <td mat-cell *matCellDef="let member">
-        <button mat-button (click)="this.removeUserEvent.emit(member)">Remove User</button>
-        <button mat-button (click)="openDialog(member)">Edit User</button>
+        <button mat-button (click)="this.removeUserEvent.emit(member)">Eliminar Usuario</button>
+        <button mat-button (click)="openDialog(member)">Editar User</button>
       </td>
     </ng-container>
 

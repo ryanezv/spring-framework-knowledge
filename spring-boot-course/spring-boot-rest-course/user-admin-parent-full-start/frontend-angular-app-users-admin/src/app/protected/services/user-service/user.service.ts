@@ -24,7 +24,7 @@ export class UserService {
 
   updateOwnProfile(updateUser: User): Observable<User> {
     return this.http.put<User>(`/api/users/${this.userState.id}`, updateUser).pipe(
-      tap(() => this.snackbar.open('Update Profile Successfull', 'Close', snackBarConf))
+      tap(() => this.snackbar.open('Perfil actualizado exitosamente', 'Cerrar', snackBarConf))
     );
   }
 
