@@ -52,6 +52,6 @@
 
   <!-- Importar modulos -->
   <modules>
-    <!--module>users-service</module-->
+    <module>commons</module>
   </modules>
 </project>
