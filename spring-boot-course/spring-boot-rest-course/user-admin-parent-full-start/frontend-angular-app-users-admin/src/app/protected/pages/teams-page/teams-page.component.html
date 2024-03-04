@@ -1,0 +1,4 @@
+<div style="padding: 30px;">
+  <h2>Todos los cursos</h2>
+  <app-teams [teamsPagedResponse]="teamsPaged$ | async" (paginate)="paginate($event)" (search)="search($event)"></app-teams>
+</div>

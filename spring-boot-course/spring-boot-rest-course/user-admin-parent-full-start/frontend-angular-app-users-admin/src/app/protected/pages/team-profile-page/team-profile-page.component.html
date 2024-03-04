@@ -1,0 +1,4 @@
+<div class="profile-wrapper">
+  <app-team-profile [team]="team$ | async" [members]="teamMembers$ | async" (paginateMembers)="paginate($event)">
+  </app-team-profile>
+</div>

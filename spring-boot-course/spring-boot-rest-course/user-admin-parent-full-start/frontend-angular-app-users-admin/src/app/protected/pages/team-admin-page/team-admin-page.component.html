@@ -1,0 +1,36 @@
+<div class="profile-wrapper">
+
+  <mat-tab-group>
+    <mat-tab>
+      <!-- Tab Header -->
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">group_add</mat-icon>
+        Gestionar solicitudes pendientes del curso
+      </ng-template>
+      <!-- Tab Content -->
+      <div style="padding-top: 30px;">
+        <app-team-join-requests
+          [joinRequests]="teamJoinRequests$ | async" [team]="team$ | async"
+          (handleJoinRequestEvent)="handleJoinRequest($event)"
+        >
+        </app-team-join-requests>
+      </div>
+    </mat-tab>
+
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">group</mat-icon>
+        Gestionar usuarios del curso
+      </ng-template>
+      <div style="padding-top: 30px;">
+        <app-team-member-management
+          [team]="team$ | async"
+          [teamMembers]="teamMembers$ | async"
+          (removeUserEvent)="removeUser($event)"
+        >
+        </app-team-member-management>
+      </div>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>
