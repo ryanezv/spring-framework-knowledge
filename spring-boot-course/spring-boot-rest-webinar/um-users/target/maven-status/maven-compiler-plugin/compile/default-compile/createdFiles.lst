@@ -1,0 +1,4 @@
+com/apixcloud/umusers/persistence/models/User.class
+com/apixcloud/umusers/UmUsersApplication.class
+com/apixcloud/umusers/persistence/daos/UserRepository.class
+com/apixcloud/umusers/persistence/SetupDatabase.class

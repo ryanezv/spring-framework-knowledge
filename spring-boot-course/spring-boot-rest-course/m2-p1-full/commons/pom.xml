@@ -4,15 +4,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.apixcloud</groupId>
-		<artifactId>user-admin-parent-m2-p1-start</artifactId>
+		<artifactId>parent-m2-p1-full</artifactId>
 		<version>0.1.0-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.apixcloud</groupId>
-	<artifactId>commons-m2-p1-start</artifactId>
+	<artifactId>commons-m2-p1-full</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 	<name>commons</name>
-	<description>Spring Boot Rest Course - Module2-Practice1-Start</description>
+	<description>Spring Boot Rest Course - Module2-Practice1-Full</description>
 
 	<dependencies>
     
