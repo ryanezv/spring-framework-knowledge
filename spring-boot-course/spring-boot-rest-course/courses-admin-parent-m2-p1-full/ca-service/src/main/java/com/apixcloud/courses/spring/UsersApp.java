@@ -1,4 +1,4 @@
-package com.apixcloud.users.spring;
+package com.apixcloud.courses.spring;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

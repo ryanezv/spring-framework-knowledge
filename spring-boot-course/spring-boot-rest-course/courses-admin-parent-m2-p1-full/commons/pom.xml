@@ -1,31 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<name>commons-m2-p1-full</name>
+	<description>Spring Boot Rest Course - Commons-Module2-Practice1-Full</description>
+	<packaging>jar</packaging>
+
 	<parent>
 		<groupId>com.apixcloud</groupId>
 		<artifactId>courses-admin-parent-m2-p1-full</artifactId>
 		<version>0.1.0-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath>..</relativePath>
 	</parent>
+
 	<groupId>com.apixcloud</groupId>
 	<artifactId>commons-m2-p1-full</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
-	<name>commons</name>
-	<description>Spring Boot Rest Course - Module2-Practice1-Full</description>
+	<version>0.1.0-SNAPSHOT</version>		
+	<modelVersion>4.0.0</modelVersion>
 
-	<properties>
-		<java.version>17</java.version>
-	</properties>
-	
 	<dependencies>
-    
-		<!-- Utils >
+
+		<!-- Utils -->
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>${guava.version}</version>
-		</dependency-->
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -38,13 +36,13 @@
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 
-		<!-- Web Server>
+		<!-- Web Server -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-servlet-api</artifactId>
 			<version>${tomcat.version}</version>
 			<scope>provided</scope>
-		</dependency-->
+		</dependency>
 
 		<!-- Bean Validation -->
 		<dependency>
@@ -60,21 +58,21 @@
 
 		<!-- Persistence -->
 		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!--dependency>
+		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-		</dependency-->
+		</dependency>
 
 		<!-- Persistence - Providers -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
-		
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -113,10 +111,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-	
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
-	<build>
+	<build>		
 		<finalName>commons-${project.version}</finalName>
 		<resources>
 			<resource>
@@ -124,7 +127,6 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-
 	</build>
 
 </project>
