@@ -15,11 +15,11 @@ public abstract class AbstractController<T extends INameableEntity> extends Abst
 
     // update
 
-    protected final void updateInternal(final long id, final T resource) {
+    protected final void updateInternal(final long id, final T resource) {        
         RestPreconditions.checkRequestElementNotNull(resource);
-        RestPreconditions.checkRequestElementNotNull(resource.getId());
-        RestPreconditions.checkRequestState(resource.getId() == id);
-        RestPreconditions.checkNotNull(getService().findOne(resource.getId()));
+        RestPreconditions.checkRequestElementNotNull(resource.getId(), resource.getClass().getSimpleName() + " - El atributo id es obligatorio");
+        RestPreconditions.checkRequestState(resource.getId() == id, resource.getClass().getSimpleName() +" - El id request y id URI no coinciden.");
+        RestPreconditions.checkNotNull(getService().findOne(resource.getId()), resource.getClass().getSimpleName() + " - El recurso no existe en la Base de Datos.");
 
         getService().update(resource);
     }

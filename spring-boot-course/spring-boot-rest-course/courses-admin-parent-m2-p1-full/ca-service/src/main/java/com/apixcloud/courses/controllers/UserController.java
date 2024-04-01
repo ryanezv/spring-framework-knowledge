@@ -79,8 +79,9 @@ public class UserController extends AbstractController<User> implements ISorting
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
-    public void update(@PathVariable("id") final Long id, @RequestBody final User resource) {
-        updateInternal(id, resource);
+    public void update(@PathVariable("id") final Long id, @RequestBody final @Valid User resource) {
+        updateInternal(id, resource); 
+        
     }
 
     // delete

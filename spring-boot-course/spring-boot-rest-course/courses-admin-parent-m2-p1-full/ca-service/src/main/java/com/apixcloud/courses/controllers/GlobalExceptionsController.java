@@ -4,6 +4,8 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.hibernate.exception.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataAccessException;
+import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +16,11 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.apixcloud.commons.persistence.exception.MyEntityNotFoundException;
 import com.apixcloud.commons.web.exceptions.GenericResponseError;
+import com.apixcloud.commons.web.exceptions.MyBadRequestException;
+import com.apixcloud.commons.web.exceptions.MyConflictException;
+import com.apixcloud.commons.web.exceptions.MyResourceNotFoundException;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -42,13 +48,33 @@ public class GlobalExceptionsController extends ResponseEntityExceptionHandler{
     }
 
     
-    @ExceptionHandler({ ConstraintViolationException.class })
-    protected ResponseEntity<Object> handleNotFound(final RuntimeException ex, final WebRequest request) {
+    @ExceptionHandler({ ConstraintViolationException.class, MyBadRequestException.class })
+    protected ResponseEntity<Object> handleBadRequest(final RuntimeException ex, final WebRequest request) {
         log.info("Bad Request: {}", ex.getMessage());
         log.debug("Bad Request: {}", ex);
         //final String bodyOfResponse = "<handleNotFound> Mensaje HTTP 400 para nuestro cliente final";        
         return handleExceptionInternal(ex, message(HttpStatus.BAD_REQUEST, ex), new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
+
+    // 404
+
+    @ExceptionHandler({ MyResourceNotFoundException.class })
+    protected ResponseEntity<Object> handleNotFound(final RuntimeException ex, final WebRequest request) {
+        log.info("Not Found: {}", ex.getMessage());
+        log.debug("Not Found: {}", ex);
+        return handleExceptionInternal(ex, message(HttpStatus.NOT_FOUND, ex), new HttpHeaders(), HttpStatus.NOT_FOUND, request);
+    }
+   
+    // 409
+
+    @ExceptionHandler({ MyConflictException.class })
+    protected ResponseEntity<Object> handleConflict(final RuntimeException ex, final WebRequest request) {
+        log.info("Conflict Request: {}", ex.getMessage());
+        log.debug("Conflict Request: {}", ex);
+        return handleExceptionInternal(ex, message(HttpStatus.CONFLICT, ex), new HttpHeaders(), HttpStatus.CONFLICT, request);
+    }
+
+
 
     private final GenericResponseError message(final HttpStatus httpStatus, final Exception ex) {
         final String message = ex.getMessage() == null ? ex.getClass().getSimpleName() : ex.getMessage();

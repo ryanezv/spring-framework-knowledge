@@ -1,4 +1,7 @@
 {
     "java.compile.nullAnalysis.mode": "disabled",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.project.sourcePaths": [
+        "spring-boot-course/spring-boot-rest-course/courses-admin-parent-m2-p1-start"
+    ]
 }
