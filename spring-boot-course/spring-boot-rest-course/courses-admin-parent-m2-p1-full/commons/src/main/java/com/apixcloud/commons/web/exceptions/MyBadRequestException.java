@@ -1,4 +1,4 @@
-package com.apixcloud.commons.web.exception;
+package com.apixcloud.commons.web.exceptions;
 
 public final class MyBadRequestException extends RuntimeException {
 

@@ -1,9 +1,7 @@
 package com.apixcloud.courses.controllers;
 
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -14,55 +12,57 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.apixcloud.commons.utils.QueryConstants;
 import com.apixcloud.commons.web.controllers.AbstractController;
 import com.apixcloud.commons.web.controllers.ISortingController;
-import com.apixcloud.courses.persistence.models.User;
-import com.apixcloud.courses.services.IUserService;
+import com.apixcloud.courses.persistence.models.Privilege;
+import com.apixcloud.courses.services.IPrivilegeService;
 import com.apixcloud.courses.utils.UmMappings;
 
-@RestController
-@RequestMapping(value = UmMappings.USERS)
-public class UserController extends AbstractController<User> implements ISortingController<User> {
+@Controller
+@RequestMapping(value = UmMappings.PRIVILEGES)
+public class PrivilegeController extends AbstractController<Privilege> implements ISortingController<Privilege> {
 
     @Autowired
-    private IUserService service;
+    private IPrivilegeService service;
 
     // find - all paginated, ordered or both
 
     @Override
-    @RequestMapping(params = { QueryConstants.PAGE, QueryConstants.SIZE, QueryConstants.SORT_BY }, method = RequestMethod.GET)    
-    public List<User> findAllPaginatedAndSorted(@RequestParam(value = QueryConstants.PAGE) final int page, @RequestParam(value = QueryConstants.SIZE) final int size, @RequestParam(value = QueryConstants.SORT_BY) final String sortBy,
+    @RequestMapping(params = { QueryConstants.PAGE, QueryConstants.SIZE, QueryConstants.SORT_BY }, method = RequestMethod.GET)
+    @ResponseBody
+    public List<Privilege> findAllPaginatedAndSorted(@RequestParam(value = QueryConstants.PAGE) final int page, @RequestParam(value = QueryConstants.SIZE) final int size, @RequestParam(value = QueryConstants.SORT_BY) final String sortBy,
         @RequestParam(value = QueryConstants.SORT_ORDER) final String sortOrder) {
         return findPaginatedAndSortedInternal(page, size, sortBy, sortOrder);
     }
 
     @Override
-    @RequestMapping(params = { QueryConstants.PAGE, QueryConstants.SIZE }, method = RequestMethod.GET)    
-    public List<User> findAllPaginated(@RequestParam(value = QueryConstants.PAGE) final int page, @RequestParam(value = QueryConstants.SIZE) final int size) {
+    @RequestMapping(params = { QueryConstants.PAGE, QueryConstants.SIZE }, method = RequestMethod.GET)
+    @ResponseBody
+    public List<Privilege> findAllPaginated(@RequestParam(value = QueryConstants.PAGE) final int page, @RequestParam(value = QueryConstants.SIZE) final int size) {
         return findPaginatedInternal(page, size);
     }
 
     @Override
     @RequestMapping(params = { QueryConstants.SORT_BY }, method = RequestMethod.GET)
-    public List<User> findAllSorted(@RequestParam(value = QueryConstants.SORT_BY) final String sortBy, @RequestParam(value = QueryConstants.SORT_ORDER) final String sortOrder) {
+    @ResponseBody
+    public List<Privilege> findAllSorted(@RequestParam(value = QueryConstants.SORT_BY) final String sortBy, @RequestParam(value = QueryConstants.SORT_ORDER) final String sortOrder) {
         return findAllSortedInternal(sortBy, sortOrder);
     }
 
-    // find - all
-
     @Override
     @RequestMapping(method = RequestMethod.GET)
-    public List<User> findAll(final HttpServletRequest request) {
+    @ResponseBody
+    public List<Privilege> findAll(final HttpServletRequest request) {
         return findAllInternal(request);
     }
 
     // find - one
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public User findOne(@PathVariable("id") final Long id) {
+    @ResponseBody
+    public Privilege findOne(@PathVariable("id") final Long id) {
         return findOneInternal(id);
     }
 
@@ -70,7 +70,7 @@ public class UserController extends AbstractController<User> implements ISorting
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@RequestBody final User resource) {
+    public void create(@RequestBody final Privilege resource) {
         createInternal(resource);
     }
 
@@ -78,7 +78,7 @@ public class UserController extends AbstractController<User> implements ISorting
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
-    public void update(@PathVariable("id") final Long id, @RequestBody final User resource) {
+    public void update(@PathVariable("id") final Long id, @RequestBody final Privilege resource) {
         updateInternal(id, resource);
     }
 
@@ -90,10 +90,10 @@ public class UserController extends AbstractController<User> implements ISorting
         deleteByIdInternal(id);
     }
 
-    /* Spring */
+    // Spring
 
     @Override
-    protected final IUserService getService() {
+    protected final IPrivilegeService getService() {
         return service;
     }
 
