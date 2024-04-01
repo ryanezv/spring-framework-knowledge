@@ -14,6 +14,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -37,20 +41,23 @@ public class User implements INameableEntity, INameableDto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "USER_ID")
     private Long id;
-
-    @Column(nullable = false)
+    
+    @NotNull(message = "El atributo {name} no puede ser nulo")
     private String name;
 
     @Column(unique = true, nullable = false)
+    @Size(min = 3, max = 30)
+    //@NotEmpty(message = "El atributo {username} no puede ser vacío")
     private String username;
 
     @Column(nullable = false)
+    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "{email} formato invalido")
     private String email;
 
     @Column(nullable = false)
     private String password;
 
-    @Column()
+    @Column()    
     private Boolean locked = false;
 
     // gets the String from our AuditorAware (config)

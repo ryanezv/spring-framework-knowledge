@@ -3,6 +3,7 @@ package com.apixcloud.courses.controllers;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -70,7 +71,7 @@ public class UserController extends AbstractController<User> implements ISorting
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@RequestBody final User resource) {
+    public void create(@RequestBody @Valid final User resource) {
         createInternal(resource);
     }
 
