@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<name>ca-service-m2-p1-full</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Spring Boot Rest Course - Courses-Admin-Module2-Practice1-Full</description>
 	<packaging>jar</packaging>
 	
 	<parent>

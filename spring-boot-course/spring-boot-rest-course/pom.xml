@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-      
-  
+    
   <modelVersion>4.0.0</modelVersion>
     
   <groupId>com.apixcloud</groupId>
@@ -21,30 +20,24 @@
   <dependencies>
         
     <dependency>
-          
-      
+            
       <groupId>junit</groupId>
-          
-      
+            
       <artifactId>junit</artifactId>
-          
-      
+            
       <version>3.8.1</version>
-          
-      
+            
       <scope>test</scope>
-        
+                    
     
     </dependency>
       
   </dependencies>
-      
-  
+    
   <licenses>
         
     <license>
-          
-      
+            
       <name>MIT License</name>
             
       <url>http://www.opensource.org/licenses/mit-license.php</url>
@@ -63,17 +56,15 @@
       <email>yanezv.ricardo@gmail..com</email>
             
       <name>Ricardo Yañez</name>
-          
-      
+            
       <url>https://github.com/ryanezv</url>
             
       <id>ryanezv</id>
-          
+                      
     </developer>
-      
+            
   </developers>
-      
-  
+    
   <modules>
         
     <module>user-admin-parent-m1-p3-start</module>
@@ -81,9 +72,17 @@
     <module>user-admin-parent-m1-p1-start</module>
         
     <module>user-admin-parent-m1-p2-start</module>
-
+        
     <module>courses-admin-parent-m2-p1-full</module>
-  </modules>
+        
+    <module>courses-admin-parent-m2-p2-start</module>
+        
+    <module>courses-admin-parent-m2-p2-full</module>
     
+    <module>courses-admin-parent-m2-p3-start</module>
 
+    <module>courses-admin-parent-m2-p3-full</module>
+      
+  </modules>
+  
 </project>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>ca-service-m3-p1-start</name>
+	<description>Spring Boot Rest Course - Courses-Admin-Module3-Practice1-Start</description>
+	<packaging>jar</packaging>
+	
+	<parent>
+		<groupId>com.apixcloud</groupId>
+		<artifactId>courses-admin-parent-m3-p1-start</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	
+	<groupId>com.apixcloud</groupId>
+	<artifactId>ca-service-m3-p1-start</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+		
+	<dependencies>
+
+		<!-- internal -->
+
+        <dependency>
+            <groupId>com.apixcloud</groupId>
+            <artifactId>commons-m3-p1-start</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+		<!-- web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- xml support (marshalling) -->
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.woodstox</groupId>
+            <artifactId>woodstox-core-asl</artifactId>
+            <version>${woodstox-core-asl.version}</version>
+        </dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>ca-service-${project.version}</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	  </build>
+
+</project>

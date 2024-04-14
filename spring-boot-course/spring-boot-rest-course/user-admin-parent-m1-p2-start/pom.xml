@@ -37,6 +37,6 @@
 
 	<modules>
 		<module>commons</module>
-		<module>users-service</module>
+		<!--module>users-service</module-->
 	</modules>
 </project>
