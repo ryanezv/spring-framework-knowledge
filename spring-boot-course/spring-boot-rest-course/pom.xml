@@ -67,6 +67,8 @@
     
   <modules>
         
+    <module>courses-m1-p1-full</module>
+
     <module>user-admin-parent-m1-p3-start</module>
         
     <module>user-admin-parent-m1-p1-start</module>
@@ -82,6 +84,24 @@
     <module>courses-admin-parent-m2-p3-start</module>
 
     <module>courses-admin-parent-m2-p3-full</module>
+
+    <module>courses-admin-parent-m3-p1-start</module>
+
+    <module>courses-admin-parent-m3-p1-full</module>
+
+    <module>courses-admin-parent-m3-p2-start</module>
+
+    <module>courses-admin-parent-m3-p2-full</module>
+
+    <module>courses-admin-parent-m3-p3-start</module>
+    
+    <module>courses-admin-parent-m3-p3-full</module>
+
+    <module>courses-admin-parent-m3-p4-start</module>
+
+    <module>courses-admin-parent-m3-p4-full</module>
+
+    <module>courses-admin-parent-m3-p5-start</module>
       
   </modules>
   

@@ -21,8 +21,6 @@ import com.apixcloud.commons.web.controllers.ISortingController;
 import com.apixcloud.courses.persistence.models.Privilege;
 import com.apixcloud.courses.services.IPrivilegeService;
 import com.apixcloud.courses.utils.UmMappings;
-import org.springframework.web.servlet.DispatcherServlet;
-import org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor;
 
 @Controller
 @RequestMapping(value = UmMappings.PRIVILEGES)

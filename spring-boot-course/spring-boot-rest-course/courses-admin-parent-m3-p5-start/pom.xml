@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+  <modelVersion>4.0.0</modelVersion>
+    
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.18</version>
+    <relativePath/>     
+    <!-- lookup parent from repository -->      
+  </parent>
+    
+  <groupId>com.apixcloud</groupId>
+  <artifactId>courses-admin-parent-m3-p5-start</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <name>courses-admin-parent-m3-p5-start</name>
+  
+  <description>Spring Boot Rest Course - Module3-Practice5-start</description>
+  <packaging>pom</packaging>
+  <licenses>
+    <license>    
+      <name>MIT License</name>    
+      <url>http://www.opensource.org/licenses/mit-license.php</url>    
+      <distribution>repo</distribution>  
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>    
+      <email>yanezv.ricardo@gmail.com</email>    
+      <name>Ricardo Yañez</name>    
+      <url>https://github.com/ryanezv</url>    
+      <id>ryanezv</id>  
+    </developer>  
+  </developers>
+    
+  <properties>
+    <!-- non-dependencies -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>17</java.version>
+    <!-- Librerías commons and utils -->
+    <guava.version>27.0-jre</guava.version>
+    <!-- servidor Tomcat embebido -->
+    <tomcat.version>9.0.83</tomcat.version>
+    <!-- marshalling -->
+    <woodstox-core-asl.version>4.4.1</woodstox-core-asl.version>
+      
+  </properties>
+    
+  <dependencies>	
+  </dependencies>
+    
+  <build>
+  </build>
+    
+  <modules>
+    <module>commons</module>
+    <module>ca-service</module>      
+  </modules>
+
+</project>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>ca-service-m3-p4-start</name>
+	<description>Spring Boot Rest Course - Courses-Admin-Module3-Practice4-start</description>
+	<packaging>jar</packaging>
+	
+	<parent>
+		<groupId>com.apixcloud</groupId>
+		<artifactId>courses-admin-parent-m3-p4-start</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>	
+	
+	<groupId>com.apixcloud</groupId>
+	<artifactId>ca-service-m3-p4-start</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+		
+	<dependencies>
+
+		<!-- internal -->
+
+        <dependency>
+            <groupId>com.apixcloud</groupId>
+            <artifactId>commons-m3-p4-start</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
+		<!-- web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- security -->
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+            <version>2.5.2</version>
+        </dependency>
+		
+		<!-- xml support (marshalling) -->
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.woodstox</groupId>
+            <artifactId>woodstox-core-asl</artifactId>
+            <version>${woodstox-core-asl.version}</version>
+        </dependency>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<finalName>ca-service-${project.version}</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version> <!-- Usa la versión más reciente -->
+				<configuration>
+					<!--includes>
+						<include>**/*IntegrationTest.java</include>
+					</includes-->
+				</configuration>
+			</plugin>
+		</plugins>
+
+	  </build>
+
+</project>
