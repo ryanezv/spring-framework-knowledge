@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.apixcloud</groupId>
+    <artifactId>courses-admin-parent-m1-p2-start</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.apixcloud</groupId>
+  <artifactId>commons-m1-p2-start</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>commons-m1-p2-start</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <!-- healt checks -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- DevTools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
