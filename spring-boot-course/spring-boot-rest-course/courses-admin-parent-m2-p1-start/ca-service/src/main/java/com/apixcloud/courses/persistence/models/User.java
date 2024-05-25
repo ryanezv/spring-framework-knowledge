@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -47,11 +49,15 @@ public class User implements INameableEntity, INameableDto {
     @Column(nullable = false)
     private String email;
 
+    @Min(value = 18, message = "Debe ser mayor a 18 años")
+    @Max(value = 99, message = "Debe ser menor a 100 años")
+    private int age;
+    
     @Column(nullable = false)
     private String password;
 
     @Column()
-    private Boolean locked = false;
+    private Boolean locked = true;
 
     // gets the String from our AuditorAware (config)
     @CreatedDate
@@ -77,6 +83,7 @@ public class User implements INameableEntity, INameableDto {
         this.email = email;
         this.password = password;
         this.roles = roles;
-        this.locked = false;
+        this.age = 18;
+        this.locked = true;
     }
 }

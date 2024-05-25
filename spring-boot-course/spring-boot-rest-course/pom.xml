@@ -111,15 +111,15 @@
     <module>courses-admin-parent-m1-p5-start</module>
     <module>courses-admin-parent-m1-p5-full</module>
 
-    <!-- module 2 >
+    <!-- module 2 -->
     <module>courses-admin-parent-m2-p1-full</module>
     <module>courses-admin-parent-m2-p1-start</module>
 
     <module>courses-admin-parent-m2-p2-start</module>
     <module>courses-admin-parent-m2-p2-full</module>
-        
+            
     <module>courses-admin-parent-m2-p3-start</module>
-    <module>courses-admin-parent-m2-p3-full</module-->
+    <module>courses-admin-parent-m2-p3-full</module>
 
     <!-- module 3 >
     <module>courses-admin-parent-m3-p1-start</module>        

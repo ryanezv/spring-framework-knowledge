@@ -54,6 +54,7 @@
 	<modules>
 		<module>commons</module>
 		<module>ca-service</module>
+		<module>exceptions</module>
 	</modules>
 
 </project>

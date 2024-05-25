@@ -18,9 +18,6 @@ public abstract class AbstractController<T extends INameableEntity> extends Abst
     protected final void updateInternal(final long id, final T resource) {
         RestPreconditions.checkRequestElementNotNull(resource);
         RestPreconditions.checkRequestElementNotNull(resource.getId());
-        RestPreconditions.checkRequestState(resource.getId() == id);
-        RestPreconditions.checkNotNull(getService().findOne(resource.getId()));
-
         getService().update(resource);
     }
 

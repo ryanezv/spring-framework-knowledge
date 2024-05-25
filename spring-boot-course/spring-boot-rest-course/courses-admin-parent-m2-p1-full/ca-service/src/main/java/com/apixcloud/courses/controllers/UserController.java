@@ -1,9 +1,14 @@
 package com.apixcloud.courses.controllers;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolation;
 import javax.validation.Valid;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,6 +27,9 @@ import com.apixcloud.courses.persistence.models.User;
 import com.apixcloud.courses.services.IUserService;
 import com.apixcloud.courses.utils.UmMappings;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping(value = UmMappings.USERS)
 public class UserController extends AbstractController<User> implements ISortingController<User> {
@@ -69,7 +77,7 @@ public class UserController extends AbstractController<User> implements ISorting
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@RequestBody @Valid final User resource) {
+    public void create(@RequestBody @Valid final User resource) {        
         createInternal(resource);
     }
 
@@ -78,8 +86,7 @@ public class UserController extends AbstractController<User> implements ISorting
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
     public void update(@PathVariable("id") final Long id, @RequestBody final @Valid User resource) {
-        updateInternal(id, resource); 
-        
+        updateInternal(id, resource);         
     }
 
     // delete

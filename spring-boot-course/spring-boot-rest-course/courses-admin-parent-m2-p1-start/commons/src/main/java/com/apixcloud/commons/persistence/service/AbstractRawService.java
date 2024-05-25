@@ -6,8 +6,6 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -22,13 +20,6 @@ import java.util.Optional;
 @Transactional
 public abstract class AbstractRawService<T extends IWithName> implements IRawService<T> {
     protected final Logger logger = LoggerFactory.getLogger(getClass());
-
-    /*@Autowired
-    //protected ApplicationEventPublisher eventPublisher;
-
-    public AbstractRawService() {
-        super();
-    }*/
 
     // API
 

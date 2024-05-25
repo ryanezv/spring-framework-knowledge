@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -39,6 +41,7 @@ public class Role implements INameableEntity, INameableDto {
     private Long id;
 
     @Column(unique = true, nullable = false)
+    @NotNull(message = "El atributo {name} no puede ser nulo")    
     private String name;
 
     // gets the String from our AuditorAware (config)

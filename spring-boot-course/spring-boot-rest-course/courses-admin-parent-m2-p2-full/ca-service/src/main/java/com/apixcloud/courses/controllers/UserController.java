@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.server.ServerWebInputException;
 
 import com.apixcloud.commons.utils.QueryConstants;
 import com.apixcloud.commons.web.controllers.AbstractController;
@@ -80,6 +82,10 @@ public class UserController extends AbstractController<User> implements ISorting
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.OK)
     public void update(@PathVariable("id") final Long id, @RequestBody final @Valid User resource) {
+        if(id > 1){
+            //throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Dato invalido");
+            throw new ServerWebInputException("Data invalido");
+        }
         updateInternal(id, resource); 
         
     }

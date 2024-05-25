@@ -1,9 +1,11 @@
 package com.apixcloud.courses.persistence.models;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.FetchType;
@@ -14,12 +16,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.CreatedDate;
@@ -49,22 +57,35 @@ public class User implements INameableEntity, INameableDto {
     private String name;
 
     @Column(unique = true, nullable = false)
-    @Size(min = 2, max = 30)    
+    @Size(min = 3, max = 99, message = "Debe tener entre 2 y 99 caracteres")
     private String username;
 
-    @Min(value = 0)
-    @Max(value = 99)
+    //@Min(value = 18, message = "Debe ser mayor a 18 años")
+    @Max(value = 99, message = "Debe ser menor a 100 años")
+    //@PositiveOrZero(message = "La edad es invalida")
+    @Positive(message = "Edad invalida")
     private int age;
 
     @Column(nullable = false)    
-    @Email
+    //@Email(message = "Email debe ser un formato valido")
+    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "{email} formato invalido")
     private String email;
+
+    @Column
+    @ElementCollection
+    private Set<@Email(message = "Email con formato invalido") String> alternativesEmail;
+
+    @Column
+    @Temporal(value = TemporalType.DATE)
+    @PastOrPresent(message = "Fecha de cumpleaños invalida")
+    private Date dateOfBirth;
 
     @Column(nullable = false)
     private String password;
 
-    @Column()    
-    private Boolean locked = false;
+    @Column()
+    @AssertTrue(message = "Invalid value {locked}")    
+    private Boolean locked = true;
 
     // gets the String from our AuditorAware (config)
     @CreatedDate
@@ -90,6 +111,7 @@ public class User implements INameableEntity, INameableDto {
         this.email = email;
         this.password = password;
         this.roles = roles;
-        this.locked = false;
+        this.age = 18;
+        this.locked = true;
     }
 }
