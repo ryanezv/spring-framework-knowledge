@@ -14,15 +14,15 @@ Comenzamos con el más importante que es el Kit de Desarrollo de Software (SDK p
 
 1. Accede al sitio web oficial de Oracle: https://www.oracle.com/mx/java/technologies/downloads/.
 
-   ![Texto Alternativo](img/mac/jdk/img0.png)
+   ![Texto Alternativo](img/mac/JDK/img0.png)
 
 2. En la sección "JDK Development Kit 17.0.9 downloads", te da las siguientes opciones:
 
-   ![Texto Alternativo](img/mac/jdk/img1.png)
+   ![Texto Alternativo](img/mac/JDK/img1.png)
 
 3. Vamos a seleccionar x64 Compressed Archive.
 
-   ![Texto Alternativo](img/mac/jdk/img2.png)
+   ![Texto Alternativo](img/mac/JDK/img2.png)
 
 4. Acepta los términos de la licencia y descarga el instalador.
 
@@ -30,11 +30,11 @@ Comenzamos con el más importante que es el Kit de Desarrollo de Software (SDK p
 
 1. Abre la Terminal en tu Mac. Puedes encontrarla en la carpeta de Aplicaciones bajo la carpeta Utilidades, o usar Spotlight (Cmd + Espacio y luego escribe "Terminal").
 
-   ![Texto Alternativo](img/mac/jdk/img3.png)
+   ![Texto Alternativo](img/mac/JDK/img3.png)
 
 2. Navega al directorio donde descargaste el archivo tar.gz. Puedes usar el comando cd para cambiar de directorio.
 
-   ![Texto Alternativo](img/mac/jdk/img4.png)
+   ![Texto Alternativo](img/mac/JDK/img4.png)
 
 3. Ejecuta el siguiente comando para extraer el contenido del archivo tar.gz: ` tar -xvf [nombre_archivo]` . 
 
@@ -42,9 +42,9 @@ Comenzamos con el más importante que es el Kit de Desarrollo de Software (SDK p
    - `-v`: Esta opción activa el modo "verbose" (detallado), lo que significa que `tar` mostrará información detallada sobre los archivos que está extrayendo mientras trabaja.
    - `-f`: Esta opción se utiliza para especificar el nombre del archivo tar del cual queremos extraer los archivos.
 
-   ![Texto Alternativo](img/mac/jdk/img5.png)
+   ![Texto Alternativo](img/mac/JDK/img5.png)
 
-   ![Texto Alternativo](img/mac/jdk/img6.png)
+   ![Texto Alternativo](img/mac/JDK/img6.png)
 
 ##### **Paso 3: Configurar las Variables de Entorno**
 
@@ -56,7 +56,7 @@ Comenzamos con el más importante que es el Kit de Desarrollo de Software (SDK p
 
    ` export PATH=$JAVA_HOME/bin:$PATH`
 
-   ![Texto Alternativo](img/mac/jdk/img7.png)
+   ![Texto Alternativo](img/mac/JDK/img7.png)
 
 3. Guarda los cambios y cierra el editor.
 
@@ -68,7 +68,7 @@ Comenzamos con el más importante que es el Kit de Desarrollo de Software (SDK p
 
 2. Deberías ver información sobre la versión de Java instalada, que debería ser la versión 17.
 
-   ![Texto Alternativo](img/mac/jdk/img8.png)
+   ![Texto Alternativo](img/mac/JDK/img8.png)
 
 ¡Felicidades! Has instalado con éxito el JDK de Java en tu sistema.
 
