@@ -1,0 +1,162 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.apixcloud.App",
+            "projectName": "com.apixcloud-ca-service-m1-p2-start"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m1-p3-full"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(1)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m1-p3-start"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(2)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m1-p4-full"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(3)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m1-p4-start"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(4)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m1-p5-full"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(5)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m1-p5-start"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(6)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m2-p1-full"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(7)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m2-p1-start"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(8)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m2-p2-full"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(9)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m2-p2-start"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(10)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m2-p3-full"
+        },
+        {
+            "type": "java",
+            "name": "UsersApp(11)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.courses.spring.UsersApp",
+            "projectName": "com.apixcloud-ca-service-m2-p3-start"
+        },
+        {
+            "type": "java",
+            "name": "App(1)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.App",
+            "projectName": "com.apixcloud-commons-m1-p2-start"
+        },
+        {
+            "type": "java",
+            "name": "DemoApplication",
+            "request": "launch",
+            "mainClass": "com.apixcloud.commons.DemoApplication",
+            "projectName": "com.apixcloud-commons-m1-p3-full"
+        },
+        {
+            "type": "java",
+            "name": "DemoApplication(1)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.commons.DemoApplication",
+            "projectName": "com.apixcloud-commons-m1-p3-start"
+        },
+        {
+            "type": "java",
+            "name": "DemoApplication(2)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.commons.DemoApplication",
+            "projectName": "com.apixcloud-commons-m1-p4-full"
+        },
+        {
+            "type": "java",
+            "name": "DemoApplication(3)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.commons.DemoApplication",
+            "projectName": "com.apixcloud-commons-m1-p4-start"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.apixcloud.Main",
+            "projectName": "com.apixcloud-exceptions"
+        },
+        {
+            "type": "java",
+            "name": "UmUsersApplication",
+            "request": "launch",
+            "mainClass": "com.apixcloud.umusers.UmUsersApplication",
+            "projectName": "com.apixcloud-um-users"
+        },
+        {
+            "type": "java",
+            "name": "App(2)",
+            "request": "launch",
+            "mainClass": "com.apixcloud.webapp.App",
+            "projectName": "com.apixcloud.webapp-ca-webapp-m1-p2-start"
+        }
+    ]
+}

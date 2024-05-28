@@ -40,7 +40,7 @@
     <!-- Librerías commons and utils -->
     <guava.version>27.0-jre</guava.version>
     <!-- servidor Tomcat embebido -->
-    <tomcat.version>9.0.83</tomcat.version>
+    <tomcat.version>9.0.83</tomcat.version>    
   </properties>
   <dependencies>	
   </dependencies>

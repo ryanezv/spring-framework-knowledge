@@ -54,7 +54,7 @@ public abstract class AbstractReadOnlyController<T extends IWithName> {
             throw new MyResourceNotFoundException();
         }
 
-        return Lists.newArrayList(resultPage.getContent());
+        return Lists.newArrayList(resultPage);
     }
 
     protected final List<T> findAllSortedInternal(final String sortBy, final String sortOrder) {

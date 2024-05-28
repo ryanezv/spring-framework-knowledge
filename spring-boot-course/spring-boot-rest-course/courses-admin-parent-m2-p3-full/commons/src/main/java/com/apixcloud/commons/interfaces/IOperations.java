@@ -3,6 +3,8 @@ package com.apixcloud.commons.interfaces;
 import java.io.Serializable;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 public interface IOperations<T extends Serializable> {
 
     // find - one
@@ -17,7 +19,7 @@ public interface IOperations<T extends Serializable> {
     /**
      * - contract: if nothing is found, an empty list will be returned to the calling client <br>
      */
-    List<T> findAllSorted(final String sortBy, final String sortOrder);
+    Page<T> findAllSorted(final String sortBy, final String sortOrder);
 
     /**
      * - contract: if nothing is found, an empty list will be returned to the calling client <br>

@@ -1,6 +1,8 @@
 package com.apixcloud.courses.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,12 +17,18 @@ import com.apixcloud.courses.services.IUserService;
 public class UserServiceImpl extends AbstractService<User> implements IUserService {
 
     @Autowired
-    private IUserJpaDao dao;
+    private IUserJpaDao dao;    
 
     public UserServiceImpl() {
         super();
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public Page<User> findAllPaginatedRaw(final int page, final int size) {
+        final Page<User> userPage = getDao().findAll(PageRequest.of(page, size));        
+        return userPage;
+    }
     // find
 
     @Override

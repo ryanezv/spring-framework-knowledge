@@ -17,7 +17,6 @@ import com.apixcloud.commons.interfaces.IWithName;
 import com.apixcloud.commons.persistence.service.IRawService;
 import com.apixcloud.commons.web.RestPreconditions;
 import com.apixcloud.commons.web.exceptions.MyResourceNotFoundException;
-import com.google.common.collect.Lists;
 
 public abstract class AbstractReadOnlyController<T extends IWithName> {
     protected final Logger logger = LoggerFactory.getLogger(getClass());
@@ -39,33 +38,32 @@ public abstract class AbstractReadOnlyController<T extends IWithName> {
         return getService().findAll();
     }
 
-    protected final List<T> findPaginatedAndSortedInternal(final int page, final int size, final String sortBy, final String sortOrder) {
+    protected final Page<T> findPaginatedAndSortedInternal(final int page, final int size, final String sortBy, final String sortOrder) {
         final Page<T> resultPage = getService().findAllPaginatedAndSortedRaw(page, size, sortBy, sortOrder);
         if (page > resultPage.getTotalPages()) {
             throw new MyResourceNotFoundException();
         }
 
-        return Lists.newArrayList(resultPage.getContent());
+        return resultPage;
     }
 
-    protected final List<T> findPaginatedInternal(final int page, final int size) {
+    protected final Page<T> findPaginatedInternal(final int page, final int size) {
         final Page<T> resultPage = getService().findAllPaginatedRaw(page, size);
         if (page > resultPage.getTotalPages()) {
             throw new MyResourceNotFoundException();
         }
 
-        return Lists.newArrayList(resultPage.getContent());
+        return resultPage;
     }
 
-    protected final List<T> findAllSortedInternal(final String sortBy, final String sortOrder) {
-        final List<T> resultPage = getService().findAllSorted(sortBy, sortOrder);
+    protected final Page<T> findAllSortedInternal(final String sortBy, final String sortOrder) {
+        final Page<T> resultPage = getService().findAllSorted(sortBy, sortOrder);
         return resultPage;
     }
 
     // count
 
     protected final long countInternal() {
-        // InvalidDataAccessApiUsageException dataEx - ResourceNotFoundException
         return getService().count();
     }
 

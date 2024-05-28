@@ -118,7 +118,23 @@ public class SecuritySetup implements ApplicationListener<ContextRefreshedEvent>
         final Role roleMember = roleService.findByName(Roles.ROLE_MEMBER);        
         
         createUserIfNotExisting(Users.ADMIN_USERNAME, Users.ADMIN_EMAIL, Users.ADMIN_NAME, Users.ADMIN_PASS, Sets.<Role> newHashSet(roleAdmin));
-        createUserIfNotExisting(Users.MEMBER_USERNAME, Users.MEMBER_EMAIL, Users.MEMBER_NAME, Users.MEMBER_PASS, Sets.<Role> newHashSet(roleMember));        
+        createUserIfNotExisting(Users.MEMBER_USERNAME, Users.MEMBER_EMAIL, Users.MEMBER_NAME, Users.MEMBER_PASS, Sets.<Role> newHashSet(roleMember));
+
+        createUserIfNotExisting("a-member01", "member01@dummy.com.mx", "Member 01", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("b-member02", "member02@dummy.com.mx", "Member 02", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("c-member03", "member03@dummy.com.mx", "Member 03", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("d-member04", "member04@dummy.com.mx", "Member 04", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("e-member05", "member05@dummy.com.mx", "Member 05", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("f-member06", "member06@dummy.com.mx", "Member 06", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("g-member07", "member07@dummy.com.mx", "Member 07", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("member08", "member08@dummy.com.mx", "Member 08", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("member09", "member09@dummy.com.mx", "Member 09", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("member10", "member10@dummy.com.mx", "Member 10", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("member11", "member11@dummy.com.mx", "Member 11", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("member12", "member12@dummy.com.mx", "Member 12", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("member13", "member13@dummy.com.mx", "Member 13", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("x-member14", "member14@dummy.com.mx", "Member 14", "member123", Sets.<Role> newHashSet(roleMember));
+        createUserIfNotExisting("z-member15", "member15@dummy.com.mx", "Member 15", "member123", Sets.<Role> newHashSet(roleMember));
     }
 
     final void createUserIfNotExisting(final String username, final String email, final String name, final String pass, final Set<Role> roles) {

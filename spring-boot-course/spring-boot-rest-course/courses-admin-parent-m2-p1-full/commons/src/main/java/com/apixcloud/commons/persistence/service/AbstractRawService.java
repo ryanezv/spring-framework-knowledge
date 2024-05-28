@@ -7,6 +7,7 @@ import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
@@ -20,13 +21,6 @@ import java.util.Optional;
 @Transactional
 public abstract class AbstractRawService<T extends IWithName> implements IRawService<T> {
     protected final Logger logger = LoggerFactory.getLogger(getClass());
-
-    /*@Autowired
-    //protected ApplicationEventPublisher eventPublisher;
-
-    public AbstractRawService() {
-        super();
-    }*/
 
     // API
 
@@ -85,9 +79,9 @@ public abstract class AbstractRawService<T extends IWithName> implements IRawSer
 
     @Override
     @Transactional(readOnly = true)
-    public List<T> findAllSorted(final String sortBy, final String sortOrder) {
+    public Page<T> findAllSorted(final String sortBy, final String sortOrder) {
         final Sort sortInfo = constructSort(sortBy, sortOrder);
-        return Lists.newArrayList(getDao().findAll(sortInfo));
+        return new PageImpl<>(Lists.newArrayList(getDao().findAll(sortInfo)));
     }
 
     // save/create/persist
