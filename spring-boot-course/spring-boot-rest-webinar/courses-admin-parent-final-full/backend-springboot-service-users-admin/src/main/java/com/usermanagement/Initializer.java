@@ -33,8 +33,8 @@ public class Initializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         // Init User
-        User richard = createUser("ryanezv", "Ricardo", "Yanez", "admin123", "yanezv.ricardo@gmail.com");
-        User jovani = createUser("jovaniarz", "Jovani", "Arzate", "admin123", "jovani@apixcloud.com");
+        User richard = createUser("ricardo", "Ricardo", "Yanez", "admin123", "yanezv.ricardo@gmail.com");
+        User jovani = createUser("jovani", "Jovani", "Arzate", "admin123", "jovani@apixcloud.com");
 
         // Create Roles and Privileges
         Privilege teamMemberPrivilege = createPrivilege(Privileges.MEMBER);
