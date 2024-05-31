@@ -136,7 +136,16 @@
 
     <module>courses-admin-parent-m3-p5-start</module>
     <module>courses-admin-parent-m3-p5-full</module>
-      
+    
+    <module>courses-admin-parent-m4-p1-start</module>
+    <module>courses-admin-parent-m4-p1-full</module>
+
+    <module>courses-admin-parent-m4-p2-start</module>
+    <module>courses-admin-parent-m4-p2-full</module>
+
+    <module>courses-admin-parent-m4-p3-start</module>
+    <module>courses-admin-parent-m4-p3-full</module>
+
     <!--module>courses-m1-p1-full</module-->
   </modules>
     
